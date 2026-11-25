@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Metricra - Let Claude cook</title>
+<style>html, body, #root { margin: 0; min-height: 100%; }
+body { background: #eee9e0; }
+.mx-stage { min-height: 100vh; box-sizing: border-box; padding: clamp(10px, 2.4vw, 28px); background: #eee9e0; font-family: "Inter", -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; color: #1b1612; }
+.mx-stage *, .mx-stage *::before, .mx-stage *::after { box-sizing: border-box; }
+.mx-frame { padding: clamp(10px, 2.6vw, 38px); border-radius: 34px; max-width: 1200px; margin: 0 auto;
+  background:
+    radial-gradient(60% 60% at 0% 55%, #f2b43a 0%, transparent 70%),
+    radial-gradient(55% 70% at 100% 70%, #f08a24 0%, transparent 70%),
+    radial-gradient(50% 45% at 55% 0%, #e8b84a 0%, transparent 70%),
+    radial-gradient(50% 50% at 0% 0%, #3c7fd1 0%, transparent 70%),
+    radial-gradient(55% 50% at 100% 0%, #3d6fc2 0%, transparent 70%),
+    radial-gradient(60% 40% at 15% 100%, #4672c9 0%, transparent 70%),
+    #e9923a;
+  box-shadow: 0 30px 60px -30px rgba(120, 70, 20, .45); }
+.mx-card { border-radius: 18px; background: #efe3d3; min-height: clamp(560px, 62vw, 640px); padding: 22px 38px 40px; box-shadow: 0 2px 0 rgba(255,255,255,.5) inset, 0 10px 40px -10px rgba(80,40,0,.25); position: relative; overflow: hidden; }
+.mx-nav { display: flex; align-items: center; gap: 26px; }
+.mx-brand { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 15px; letter-spacing: -.01em; }
+.mx-links { display: flex; gap: 20px; flex: 1; font-size: 12px; color: #4a4038; }
+.mx-links a { cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.mx-chev { width: 5px; height: 5px; border-right: 1.3px solid currentColor; border-bottom: 1.3px solid currentColor; transform: rotate(45deg) translateY(-2px); display: inline-block; }
+.mx-btn { font: inherit; font-size: 13px; font-weight: 500; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; color: #fff; padding: 9px 9px 9px 15px; border-radius: 999px; background: linear-gradient(#f0642a, #d9490f); box-shadow: 0 6px 14px -6px rgba(217,73,15,.7), inset 0 1px 0 rgba(255,255,255,.35); transition: transform .2s, box-shadow .2s; }
+.mx-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 18px -6px rgba(217,73,15,.7), inset 0 1px 0 rgba(255,255,255,.35); }
+.mx-btn-sm { padding: 6px 7px 6px 12px; font-size: 11.5px; gap: 8px; }
+.mx-arrow { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); display: grid; place-items: center; }
+.mx-btn-sm .mx-arrow { width: 19px; height: 19px; }
+.mx-btn-w { background: #fff; color: #1b1612; padding: 10px 16px; box-shadow: 0 4px 12px -6px rgba(0,0,0,.25); }
+.mx-btn-w:hover { box-shadow: 0 8px 16px -6px rgba(0,0,0,.28); }
+.mx-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); align-items: center; gap: 12px; margin-top: 52px; }
+.mx-pill { display: inline-block; font-size: 11.5px; color: #a8431a; background: #fbf4ec; padding: 9px 12px; border-radius: 999px; box-shadow: 0 3px 10px -4px rgba(120,60,20,.35); }
+.mx-copy h1 { margin: 30px 0 0; font-size: clamp(40px, 5.2vw, 56px); line-height: 1.1; letter-spacing: -.035em; font-weight: 700; }
+.mx-copy h1 span { color: #4a4540; }
+.mx-sub { margin: 20px 0 0; max-width: 390px; font-size: 14.5px; line-height: 1.5; color: #5a4f46; }
+.mx-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.mx-tiny { margin: 24px 0 0; font-size: 9.5px; color: #4a4038; }
+.mx-rate { margin: 12px 0 6px; font-size: 11px; color: #4a4038; }
+.mx-stars { display: inline-flex; gap: 2px; filter: drop-shadow(0 0 6px rgba(246,194,26,.7)); }
+.mx-art { display: grid; place-items: center; }
+.mx-scene { width: 100%; max-width: 560px; aspect-ratio: 1030 / 590; position: relative; }
+.mx-bob { position: absolute; inset: 0; animation: mx-bob 5s ease-in-out infinite; will-change: transform; }
+.mx-bob img { width: 100%; height: 100%; display: block; mix-blend-mode: multiply; -webkit-mask-image: radial-gradient(ellipse 72% 76% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 72% 76% at 50% 50%, #000 62%, transparent 100%); animation: mx-sway 7s ease-in-out infinite; }
+@keyframes mx-bob { 0%,100% { transform: translateY(0) rotate(-.4deg); } 50% { transform: translateY(-9px) rotate(.5deg); } }
+@keyframes mx-sway { 0%,100% { transform: scale(1); } 50% { transform: scale(1.012); } }
+.mx-glow { position: absolute; border-radius: 50%; pointer-events: none; mix-blend-mode: screen; filter: blur(8px); }
+.mx-glow1 { left: 36%; top: 62%; width: 17%; height: 22%; background: radial-gradient(circle, rgba(255,190,60,.95), rgba(255,100,20,.55) 45%, transparent 70%); animation: mx-flame 0.9s ease-in-out infinite alternate; }
+.mx-glow2 { left: 22%; top: 60%; width: 9%; height: 14%; background: radial-gradient(circle, rgba(255,170,50,.9), rgba(255,90,10,.45) 50%, transparent 72%); animation: mx-flame 0.7s ease-in-out infinite alternate-reverse; }
+@keyframes mx-flame { 0% { opacity: .35; transform: scale(.85, .9) translateY(2px); } 50% { opacity: .9; } 100% { opacity: .65; transform: scale(1.15, 1.25) translateY(-4px); } }
+.mx-steam { position: absolute; width: 11%; aspect-ratio: 1; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(255,255,255,.9), rgba(255,255,255,.45) 45%, transparent 70%); filter: blur(7px); opacity: 0; animation: mx-rise 4.2s ease-out infinite; }
+.s1 { left: 14%; top: 36%; animation-delay: 0s; } .s2 { left: 18%; top: 38%; animation-delay: 1.4s; width: 9%; } .s3 { left: 12%; top: 40%; animation-delay: 2.8s; }
+.s4 { left: 44%; top: 40%; animation-delay: .6s; width: 9%; } .s5 { left: 40%; top: 44%; animation-delay: 2s; } .s6 { left: 47%; top: 42%; animation-delay: 3.3s; width: 8%; }
+@keyframes mx-rise { 0% { opacity: 0; transform: translate(0, 18px) scale(.6); } 20% { opacity: .85; } 100% { opacity: 0; transform: translate(14px, -120px) scale(1.9); } }
+.mx-spark { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #ffb43c; box-shadow: 0 0 8px 2px rgba(255,140,30,.8); opacity: 0; animation: mx-spark 2.2s ease-out infinite; }
+.p1 { left: 42%; top: 56%; animation-delay: 0s; } .p2 { left: 47%; top: 54%; animation-delay: .7s; } .p3 { left: 51%; top: 58%; animation-delay: 1.3s; } .p4 { left: 38%; top: 58%; animation-delay: 1.8s; }
+@keyframes mx-spark { 0% { opacity: 0; transform: translate(0,0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(14px, -70px); } }
+@media (max-width: 860px) {
+  .mx-card { padding: 18px 20px 30px; }
+  .mx-links { display: none; }
+  .mx-nav { justify-content: space-between; }
+  .mx-hero { grid-template-columns: 1fr; margin-top: 36px; gap: 26px; }
+  .mx-art { order: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .mx-bob, .mx-bob img, .mx-glow, .mx-steam, .mx-spark { animation: none; } }
+</style></head><body>
+<div class="mx-stage"><div class="mx-frame"><div class="mx-card">
+<header class="mx-nav"><div class="mx-brand"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#1b1612" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v6M12 15.5v6M2.5 12h6M15.5 12h6M5.3 5.3l4 4M14.7 14.7l4 4M18.7 5.3l-4 4M9.3 14.7l-4 4"/></svg><span>Metricra</span></div>
+<nav class="mx-links"><a>Solutions <i class="mx-chev"></i></a><a>Use cases <i class="mx-chev"></i></a><a>Pricing</a><a>Enterprise</a></nav>
+<button type="button" class="mx-btn mx-btn-sm">Try Fable 5.1 <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span></button></header>
+<main class="mx-hero"><section class="mx-copy"><span class="mx-pill">Claude's new creative playground</span>
+<h1>Let Claude <span>cook</span><br>By Fable 5.1</h1>
+<p class="mx-sub">Capture, qualify, and convert your traffic with a marketing system designed to fill your pipeline automatically</p>
+<div class="mx-cta"><button type="button" class="mx-btn">Try Fable 5.1 <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></span></button><button type="button" class="mx-btn mx-btn-w">See how it works</button></div>
+<p class="mx-tiny">Built with AI-interactive by design. Made with Fable 5.1</p><p class="mx-rate">4.7 from 2,300+ marketers</p>
+<span class="mx-stars" aria-label="4.7 out of 5"><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g0"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g0)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g1"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g1)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g2"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g2)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g3"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g3)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g4"><stop offset="50%" stop-color="#f6c21a"/><stop offset="50%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g4)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg></span></section>
+<section class="mx-art"><div class="mx-scene"><div class="mx-bob"><img alt="A blocky orange robot chef tossing food in a flaming wok" src="chef.jpg">
+<i class="mx-glow mx-glow1"></i><i class="mx-glow mx-glow2"></i><i class="mx-steam s1"></i><i class="mx-steam s2"></i><i class="mx-steam s3"></i><i class="mx-steam s4"></i><i class="mx-steam s5"></i><i class="mx-steam s6"></i><i class="mx-spark p1"></i><i class="mx-spark p2"></i><i class="mx-spark p3"></i><i class="mx-spark p4"></i></div></div></section></main>
+</div></div></div></body></html>
