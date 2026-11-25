@@ -1,183 +1,189 @@
 <!doctype html>
 <html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>سُفرة | اتعلم الطبخ المصري على أصوله</title>
-<meta name="description" content="سُفرة - وصفات مصرية أصلية خطوة بخطوة برسومات: كشري، محشي، ملوخية، فتة، حواوشي، أم علي">
+<meta name="description" content="سُفرة - وصفات مصرية أصلية خطوة بخطوة برسومات: كشري، محشي، ملوخية، فتة، حواوشي، كبدة، طعمية، كنافة وأكتر">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>html, body, #root { margin: 0; min-height: 100%; }
-body { background: #eee9e0; }
-.mx-stage { min-height: 100vh; box-sizing: border-box; padding: clamp(10px, 2.4vw, 28px); background: #eee9e0; font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif; color: #1b1612; }
-.mx-stage *, .mx-stage *::before, .mx-stage *::after { box-sizing: border-box; }
-.mx-frame { padding: clamp(10px, 2.6vw, 38px); border-radius: 34px; max-width: 1200px; margin: 0 auto;
-  background:
-    radial-gradient(60% 60% at 0% 55%, #f2b43a 0%, transparent 70%),
-    radial-gradient(55% 70% at 100% 70%, #f08a24 0%, transparent 70%),
-    radial-gradient(50% 45% at 55% 0%, #e8b84a 0%, transparent 70%),
-    radial-gradient(50% 50% at 0% 0%, #3c7fd1 0%, transparent 70%),
-    radial-gradient(55% 50% at 100% 0%, #3d6fc2 0%, transparent 70%),
-    radial-gradient(60% 40% at 15% 100%, #4672c9 0%, transparent 70%),
-    #e9923a;
-  box-shadow: 0 30px 60px -30px rgba(120, 70, 20, .45); }
-.mx-card { border-radius: 18px; background: #efe3d3; padding: 22px 38px 40px; box-shadow: 0 2px 0 rgba(255,255,255,.5) inset, 0 10px 40px -10px rgba(80,40,0,.25); position: relative; overflow: hidden; }
-.mx-nav { display: flex; align-items: center; gap: 26px; }
-.mx-brand { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 17px; letter-spacing: 0; }
-.mx-links { display: flex; gap: 22px; flex: 1; font-size: 13.5px; font-weight: 600; color: #4a4038; }
-.mx-links a { cursor: pointer; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; color: inherit; }
-.mx-links a:hover { color: #d9490f; }
-.mx-btn { font: inherit; font-size: 13.5px; font-weight: 700; border: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; color: #fff; padding: 9px 9px 9px 15px; border-radius: 999px; background: linear-gradient(#f0642a, #d9490f); box-shadow: 0 6px 14px -6px rgba(217,73,15,.7), inset 0 1px 0 rgba(255,255,255,.35); transition: transform .2s, box-shadow .2s; text-decoration: none; }
-.mx-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 18px -6px rgba(217,73,15,.7), inset 0 1px 0 rgba(255,255,255,.35); }
-.mx-btn-sm { padding: 7px 8px 7px 14px; font-size: 12.5px; gap: 8px; }
-.mx-arrow { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.45); display: grid; place-items: center; }
-.mx-btn-sm .mx-arrow { width: 19px; height: 19px; }
-.mx-btn-w { background: #fff; color: #1b1612; padding: 10px 16px; box-shadow: 0 4px 12px -6px rgba(0,0,0,.25); }
-.mx-btn-w:hover { box-shadow: 0 8px 16px -6px rgba(0,0,0,.28); }
-.mx-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); align-items: center; gap: 12px; margin-top: 46px; }
-.mx-pill { display: inline-block; font-size: 12.5px; font-weight: 700; color: #a8431a; background: #fbf4ec; padding: 9px 14px; border-radius: 999px; box-shadow: 0 3px 10px -4px rgba(120,60,20,.35); }
-.mx-copy h1 { margin: 26px 0 0; font-size: clamp(38px, 5vw, 54px); line-height: 1.25; letter-spacing: 0; font-weight: 900; }
-.mx-copy h1 span { color: #d9490f; }
-.mx-sub { margin: 18px 0 0; max-width: 420px; font-size: 15.5px; line-height: 1.75; color: #5a4f46; }
-.mx-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.mx-tiny { margin: 24px 0 0; font-size: 11px; font-weight: 600; color: #4a4038; }
-.mx-rate { margin: 12px 0 6px; font-size: 12px; font-weight: 600; color: #4a4038; }
-.mx-stars { display: inline-flex; gap: 2px; filter: drop-shadow(0 0 6px rgba(246,194,26,.7)); }
-.mx-art { display: grid; place-items: center; }
-.mx-scene { width: 100%; max-width: 580px; aspect-ratio: 1429 / 804; position: relative; }
-.mx-section { margin-top: 64px; }
-.mx-sec-head { text-align: center; max-width: 560px; margin: 0 auto 34px; }
-.mx-sec-head h2 { margin: 0; font-size: clamp(26px, 3.2vw, 36px); font-weight: 900; }
-.mx-sec-head p { margin: 12px 0 0; font-size: 14.5px; line-height: 1.75; color: #5a4f46; }
-.mx-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.mx-dish { background: #fbf4ec; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 22px -12px rgba(120,60,20,.4); transition: transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
-.mx-dish:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -12px rgba(120,60,20,.5); }
-.mx-dish img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-.mx-dish-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-.mx-dish-body h3 { margin: 0; font-size: 19px; font-weight: 800; }
-.mx-dish-body p { margin: 0; font-size: 13px; line-height: 1.7; color: #5a4f46; flex: 1; }
-.mx-chips { display: flex; gap: 8px; margin-top: 2px; }
-.mx-chip { font-size: 11px; font-weight: 700; color: #a8431a; background: #f4e2cd; border-radius: 999px; padding: 4px 10px; }
-.mx-dish-btn { margin-top: 8px; align-self: flex-start; font: inherit; font-size: 12.5px; font-weight: 700; color: #d9490f; background: none; border: 1.5px solid #d9490f; border-radius: 999px; padding: 6px 14px; cursor: pointer; transition: background .2s, color .2s; }
-.mx-dish-btn:hover { background: #d9490f; color: #fff; }
-.mx-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.mx-step { background: #fbf4ec; border-radius: 16px; padding: 22px 20px; box-shadow: 0 8px 22px -12px rgba(120,60,20,.4); }
-.mx-step-num { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 17px; color: #fff; background: linear-gradient(#f0642a, #d9490f); box-shadow: 0 6px 14px -6px rgba(217,73,15,.7); margin-bottom: 12px; }
-.mx-step h3 { margin: 0 0 6px; font-size: 16.5px; font-weight: 800; }
-.mx-step p { margin: 0; font-size: 13px; line-height: 1.7; color: #5a4f46; }
-.mx-footer { margin-top: 54px; padding-top: 20px; border-top: 1px solid rgba(120,60,20,.18); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 12px; font-weight: 600; color: #4a4038; }
-@media (max-width: 860px) {
-  .mx-card { padding: 18px 20px 30px; }
-  .mx-links { display: none; }
-  .mx-nav { justify-content: space-between; }
-  .mx-hero { grid-template-columns: 1fr; margin-top: 34px; gap: 26px; }
-  .mx-grid, .mx-steps { grid-template-columns: 1fr; }
-  .mx-section { margin-top: 48px; }
-}
-
-html{scroll-behavior:smooth}
-.mx-card{scroll-margin-top:12px}
-section[id]{scroll-margin-top:20px}
-.mx-art video,.mx-art img{width:100%;max-width:600px;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%)}
-.mx-art imgX{width:100%;max-width:600px;height:auto;display:block;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%)}
-.mx-burger{display:none;background:#fbf4ec;border:0;border-radius:12px;width:40px;height:40px;cursor:pointer;font-size:20px}
-.mx-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 24px}
-.mx-search{font:inherit;font-size:14px;padding:10px 16px;border-radius:999px;border:1.5px solid rgba(120,60,20,.25);background:#fbf4ec;min-width:220px;outline:none}
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+html,body{margin:0;min-height:100%}
+body{background:#f5ede1;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;color:#1b1612;overflow-x:hidden}
+.wrap{width:100%;padding-inline:clamp(18px,4.5vw,80px);margin:0 auto}
+/* nav */
+.mx-nav-bar{position:sticky;top:0;z-index:30;background:rgba(245,237,225,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,60,20,.1)}
+.mx-nav{display:flex;align-items:center;gap:30px;height:68px;position:relative}
+.mx-brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:21px}
+.mx-links{display:flex;gap:26px;flex:1;font-size:14.5px;font-weight:700;color:#4a4038}
+.mx-links a{text-decoration:none;color:inherit;transition:color .2s}
+.mx-links a:hover{color:#d9490f}
+.mx-btn{font:inherit;font-size:14.5px;font-weight:700;border:0;cursor:pointer;display:inline-flex;align-items:center;gap:10px;color:#fff;padding:11px 12px 11px 20px;border-radius:999px;background:linear-gradient(#f0642a,#d9490f);box-shadow:0 8px 18px -8px rgba(217,73,15,.75),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s,box-shadow .2s;text-decoration:none}
+.mx-btn:hover{transform:translateY(-2px);box-shadow:0 14px 22px -8px rgba(217,73,15,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+.mx-btn-sm{padding:8px 10px 8px 16px;font-size:13.5px}
+.mx-arrow{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);display:grid;place-items:center}
+.mx-btn-w{background:#fff;color:#1b1612;padding:12px 22px;box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}
+.mx-burger{display:none;background:#fbf4ec;border:0;border-radius:12px;width:42px;height:42px;cursor:pointer;font-size:20px}
+/* hero */
+.mx-hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.28fr);gap:clamp(20px,3vw,56px);align-items:center;padding-block:clamp(20px,3.5vw,48px)}
+.mx-pill{display:inline-block;font-size:13.5px;font-weight:800;color:#a8431a;background:#fbf4ec;padding:10px 18px;border-radius:999px;box-shadow:0 4px 12px -5px rgba(120,60,20,.35)}
+.mx-copy h1{margin:24px 0 0;font-size:clamp(40px,5.4vw,92px);line-height:1.2;font-weight:900}
+.mx-copy h1 span{color:#d9490f}
+.mx-sub{margin:20px 0 0;max-width:560px;font-size:clamp(16px,1.35vw,21px);line-height:1.8;color:#5a4f46}
+.mx-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.mx-rate{margin:26px 0 6px;font-size:14px;font-weight:700;color:#4a4038}
+.mx-stars{display:inline-flex;gap:2px;filter:drop-shadow(0 0 6px rgba(246,194,26,.7))}
+/* gradient frame (reference look) */
+.mx-frame{padding:clamp(10px,1.2vw,18px);border-radius:clamp(26px,3vw,44px);background:radial-gradient(60% 60% at 0% 55%,#f2b43a 0%,transparent 70%),radial-gradient(55% 70% at 100% 70%,#f08a24 0%,transparent 70%),radial-gradient(50% 45% at 55% 0%,#e8b84a 0%,transparent 70%),radial-gradient(50% 50% at 0% 0%,#3c7fd1 0%,transparent 70%),radial-gradient(55% 50% at 100% 0%,#3d6fc2 0%,transparent 70%),radial-gradient(60% 40% at 15% 100%,#4672c9 0%,transparent 70%),#e9923a;box-shadow:0 40px 80px -36px rgba(120,70,20,.55)}
+.mx-frame-in{border-radius:clamp(18px,2.2vw,32px);overflow:hidden;background:#efe3d3;box-shadow:0 2px 0 rgba(255,255,255,.5) inset,0 12px 40px -10px rgba(80,40,0,.3);line-height:0}
+.mx-frame-in video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+/* sections */
+.mx-section{padding-block:clamp(56px,7vw,110px)}
+.mx-alt{background:#efe3d3}
+.mx-sec-head{text-align:center;max-width:680px;margin:0 auto clamp(28px,3.5vw,48px)}
+.mx-sec-head h2{margin:0;font-size:clamp(30px,3.6vw,54px);font-weight:900}
+.mx-sec-head p{margin:14px 0 0;font-size:clamp(15px,1.2vw,18px);line-height:1.8;color:#5a4f46}
+.mx-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 clamp(24px,3vw,40px)}
+.mx-search{font:inherit;font-size:15px;padding:12px 20px;border-radius:999px;border:1.5px solid rgba(120,60,20,.25);background:#fbf4ec;min-width:260px;outline:none}
 .mx-search:focus{border-color:#d9490f}
-.mx-f{font:inherit;font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;border:1.5px solid rgba(120,60,20,.25);background:transparent;color:#4a4038;cursor:pointer}
+.mx-f{font:inherit;font-size:14px;font-weight:700;padding:10px 20px;border-radius:999px;border:1.5px solid rgba(120,60,20,.25);background:transparent;color:#4a4038;cursor:pointer;transition:all .2s}
+.mx-f:hover{border-color:#d9490f}
 .mx-f.on{background:#d9490f;color:#fff;border-color:#d9490f}
+.mx-grid{--c:4;--g:clamp(14px,1.6vw,26px);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--g)}
+.mx-grid>.mx-dish{flex:0 0 calc((100% - (var(--c) - 1)*var(--g))/var(--c))}
+.mx-dish{background:#fbf4ec;border-radius:20px;overflow:hidden;box-shadow:0 10px 26px -14px rgba(120,60,20,.45);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.mx-dish:hover{transform:translateY(-6px);box-shadow:0 22px 38px -14px rgba(120,60,20,.5)}
+.mx-dish .ph{overflow:hidden;aspect-ratio:4/3}
+.mx-dish img{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;transition:transform .5s}
+.mx-dish:hover img{transform:scale(1.06)}
+.mx-dish-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.mx-dish-body h3{margin:0;font-size:21px;font-weight:800}
+.mx-dish-body p{margin:0;font-size:14px;line-height:1.75;color:#5a4f46;flex:1}
+.mx-chips{display:flex;gap:8px;flex-wrap:wrap}
+.mx-chip{font-size:12px;font-weight:700;color:#a8431a;background:#f4e2cd;border-radius:999px;padding:4px 11px}
+.mx-dish-btn{margin-top:8px;align-self:flex-start;font:inherit;font-size:13.5px;font-weight:700;color:#d9490f;background:none;border:1.5px solid #d9490f;border-radius:999px;padding:8px 18px;cursor:pointer;transition:background .2s,color .2s}
+.mx-dish-btn:hover{background:#d9490f;color:#fff}
 .mx-empty{text-align:center;color:#5a4f46;padding:30px;display:none}
-.mx-dish img{cursor:pointer}
-.mx-faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
-.mx-faq details{background:#fbf4ec;border-radius:14px;padding:14px 18px;box-shadow:0 6px 18px -12px rgba(120,60,20,.4)}
-.mx-faq summary{cursor:pointer;font-weight:800;font-size:15px}
-.mx-faq p{margin:10px 0 0;font-size:13.5px;line-height:1.8;color:#5a4f46}
-.mx-about{max-width:760px;margin:0 auto;text-align:center;font-size:15px;line-height:1.9;color:#5a4f46}
-.mx-footer a{color:inherit;text-decoration:none;font-weight:700;cursor:pointer}.mx-footer a:hover{color:#d9490f}
-.mx-flinks{display:flex;gap:16px}
+.mx-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.mx-stat b{display:block;font-size:clamp(34px,4vw,60px);font-weight:900;color:#d9490f;line-height:1.1}
+.mx-stat span{font-size:15px;font-weight:700;color:#5a4f46}
+.mx-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,30px)}
+.mx-step{background:#fbf4ec;border-radius:22px;padding:clamp(22px,2.4vw,36px);box-shadow:0 10px 26px -14px rgba(120,60,20,.45)}
+.mx-step-num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:20px;color:#fff;background:linear-gradient(#f0642a,#d9490f);box-shadow:0 8px 16px -6px rgba(217,73,15,.7);margin-bottom:16px}
+.mx-step h3{margin:0 0 8px;font-size:21px;font-weight:800}
+.mx-step p{margin:0;font-size:15px;line-height:1.8;color:#5a4f46}
+.mx-faq{max-width:900px;margin:0 auto;display:grid;gap:12px}
+.mx-faq details{background:#fbf4ec;border-radius:16px;padding:16px 22px;box-shadow:0 6px 18px -12px rgba(120,60,20,.4)}
+.mx-faq summary{cursor:pointer;font-weight:800;font-size:16.5px}
+.mx-faq p{margin:12px 0 0;font-size:15px;line-height:1.85;color:#5a4f46}
+.mx-about{max-width:860px;margin:0 auto;text-align:center;font-size:clamp(16px,1.4vw,20px);line-height:2;color:#5a4f46}
+.mx-cta-band{margin-top:0}
+.mx-band{border-radius:clamp(24px,3vw,40px);padding:clamp(32px,5vw,72px);text-align:center;color:#fff;background:radial-gradient(60% 80% at 0% 100%,#f2b43a,transparent 70%),radial-gradient(60% 80% at 100% 0%,#3d6fc2,transparent 70%),#e9923a}
+.mx-band h2{margin:0;font-size:clamp(28px,3.6vw,52px);font-weight:900;text-shadow:0 2px 14px rgba(80,30,0,.35)}
+.mx-band p{margin:12px auto 24px;max-width:520px;font-size:17px;line-height:1.8;text-shadow:0 1px 8px rgba(80,30,0,.35)}
+.mx-footer{padding-block:28px;border-top:1px solid rgba(120,60,20,.18);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:14px;font-weight:600;color:#4a4038}
+.mx-footer a{color:inherit;text-decoration:none;font-weight:700}.mx-footer a:hover{color:#d9490f}
+.mx-flinks{display:flex;gap:20px;flex-wrap:wrap}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* modal */
 .mx-modal{position:fixed;inset:0;background:rgba(30,18,8,.55);backdrop-filter:blur(4px);z-index:50;display:none;overflow-y:auto;padding:clamp(8px,3vw,32px)}
 .mx-modal.open{display:block}
-.mx-sheet{background:#efe3d3;border-radius:22px;max-width:860px;margin:0 auto;padding:clamp(16px,3vw,32px);position:relative;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
-.mx-x{position:absolute;top:14px;left:14px;width:38px;height:38px;border-radius:50%;border:0;background:#fbf4ec;font-size:20px;cursor:pointer;z-index:2}
-.mx-sheet h2{margin:0 0 6px;font-size:clamp(26px,4vw,36px);font-weight:900}
-.mx-sheet .cover{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;margin:14px 0}
-.mx-ing{background:#fbf4ec;border-radius:16px;padding:18px 20px;margin:16px 0}
-.mx-ing h3,.mx-stps h3{margin:0 0 10px;font-size:19px;font-weight:800}
-.mx-ing label{display:flex;gap:10px;align-items:center;padding:6px 0;font-size:14.5px;cursor:pointer;border-bottom:1px dashed rgba(120,60,20,.15)}
+.mx-sheet{background:#efe3d3;border-radius:24px;max-width:980px;margin:0 auto;padding:clamp(16px,3vw,36px);position:relative;box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+.mx-x{position:absolute;top:14px;left:14px;width:40px;height:40px;border-radius:50%;border:0;background:#fbf4ec;font-size:20px;cursor:pointer;z-index:2}
+.mx-sheet h2{margin:0 0 8px;font-size:clamp(28px,4vw,42px);font-weight:900}
+.mx-sheet .cover{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin:14px 0}
+.mx-ing{background:#fbf4ec;border-radius:18px;padding:18px 22px;margin:16px 0}
+.mx-ing h3,.mx-stps h3{margin:0 0 10px;font-size:20px;font-weight:800}
+.mx-ing label{display:flex;gap:10px;align-items:center;padding:7px 0;font-size:15px;cursor:pointer;border-bottom:1px dashed rgba(120,60,20,.15)}
 .mx-ing input{accent-color:#d9490f;width:18px;height:18px}
 .mx-ing input:checked+span{text-decoration:line-through;opacity:.5}
-.mx-sp{display:none!important;;gap:10px;align-items:center;font-size:13.5px;font-weight:700;margin-bottom:6px}
-.mx-sp button{width:30px;height:30px;border-radius:50%;border:1.5px solid #d9490f;background:none;color:#d9490f;font-size:18px;cursor:pointer;line-height:1}
-.mx-st{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center;background:#fbf4ec;border-radius:16px;padding:14px;margin:12px 0}
+.mx-sp{display:none!important}
+.mx-st{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;background:#fbf4ec;border-radius:18px;padding:14px;margin:12px 0;cursor:pointer}
 .mx-st img{width:100%;border-radius:12px;display:block}
-.mx-st h4{margin:0 0 6px;font-size:17px;font-weight:800}
-.mx-st h4 b{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(#f0642a,#d9490f);color:#fff;margin-left:8px;font-size:15px}
-.mx-st p{margin:0;font-size:14px;line-height:1.85;color:#4a4038}
+.mx-st h4{margin:0 0 6px;font-size:18px;font-weight:800}
+.mx-st h4 b{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(#f0642a,#d9490f);color:#fff;margin-left:8px;font-size:15px}
+.mx-st p{margin:0;font-size:15px;line-height:1.9;color:#4a4038}
 .mx-st.done{opacity:.55}
 .mx-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .mx-toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#1b1612;color:#fff;padding:10px 20px;border-radius:999px;font-size:13px;z-index:99;opacity:0;transition:opacity .3s;pointer-events:none}
 .mx-toast.on{opacity:1}
-.mx-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;border:0;background:#d9490f;color:#fff;font-size:20px;cursor:pointer;display:none;z-index:40;box-shadow:0 8px 18px -6px rgba(217,73,15,.7)}
-@media(max-width:860px){.mx-burger{display:block}.mx-links.open{display:flex;position:absolute;top:70px;right:16px;left:16px;flex-direction:column;background:#fbf4ec;padding:16px;border-radius:16px;z-index:10;box-shadow:0 14px 30px -10px rgba(0,0,0,.3);gap:14px}.mx-nav .mx-btn-sm{display:none}.mx-st{grid-template-columns:1fr}}
-@media print{.mx-stage>.mx-frame,.mx-x,.mx-acts,.mx-top{display:none!important}.mx-modal{position:static;background:none;display:block!important}}
+.mx-top{position:fixed;bottom:20px;right:20px;width:46px;height:46px;border-radius:50%;border:0;background:#d9490f;color:#fff;font-size:20px;cursor:pointer;display:none;z-index:40;box-shadow:0 8px 18px -6px rgba(217,73,15,.7)}
+@media(max-width:1180px){.mx-grid{--c:3}}
+@media(max-width:860px){
+ .mx-burger{display:block;margin-inline-start:auto}
+ .mx-links{display:none}.mx-nav .mx-btn-sm{display:none}
+ .mx-links.open{display:flex;position:absolute;top:72px;right:0;left:0;flex-direction:column;background:#fbf4ec;padding:18px;border-radius:18px;box-shadow:0 14px 30px -10px rgba(0,0,0,.3);gap:16px}
+ .mx-hero{grid-template-columns:1fr;min-height:0;gap:28px}
+ .mx-grid{--c:2}
+ .mx-steps,.mx-stats{grid-template-columns:1fr 1fr}
+ .mx-steps{grid-template-columns:1fr}
+ .mx-st{grid-template-columns:1fr}
+}
+@media(max-width:520px){.mx-grid{--c:1}.mx-search{min-width:0;width:100%}}
+@media print{.mx-nav-bar,.mx-x,.mx-acts,.mx-top,body>main,body>section,body>footer{display:none!important}.mx-modal{position:static;background:none;display:block!important}}
 </style></head><body>
-<div class="mx-stage"><div class="mx-frame"><div class="mx-card" id="top">
-<header class="mx-nav"><a href="#top" style="text-decoration:none;color:inherit"><div class="mx-brand"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#1b1612" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v7M10.5 3v7M14 3v7M7 7h7M8.75 10v11M17.5 3c-1.5 2-2 4.5-2 6.5 0 1.5 1 2.5 2 2.5s2-1 2-2.5c0-2-.5-4.5-2-6.5zM17.5 12v9"/></svg><span>سُفرة</span></div></a>
+<div class="mx-nav-bar"><div class="wrap"><header class="mx-nav"><a href="#top" style="text-decoration:none;color:inherit"><div class="mx-brand"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1b1612" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v7M10.5 3v7M14 3v7M7 7h7M8.75 10v11M17.5 3c-1.5 2-2 4.5-2 6.5 0 1.5 1 2.5 2 2.5s2-1 2-2.5c0-2-.5-4.5-2-6.5zM17.5 12v9"/></svg><span>سُفرة</span></div></a>
 <nav class="mx-links" id="links"><a href="#recipes">الوصفات</a><a href="#how">بتتعلم إزاي؟</a><a href="#tips">نصايح المطبخ</a><a href="#about">عن سُفرة</a></nav>
 <button class="mx-burger" id="burger" aria-label="القائمة">☰</button>
-<a href="#" data-open="kushari" class="mx-btn mx-btn-sm">ابدأ الطبخ دلوقتي <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a></header>
-<main class="mx-hero"><section class="mx-copy"><span class="mx-pill">وصفات مصرية أصلية، خطوة بخطوة</span>
+<a href="#" data-open="kushari" class="mx-btn mx-btn-sm">ابدأ الطبخ دلوقتي <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a></header></div></div>
+<main id="top"><div class="wrap"><div class="mx-hero"><section class="mx-copy"><span class="mx-pill">22 وصفة مصرية أصلية، خطوة بخطوة</span>
 <h1>اتعلّم الطبخ المصري<br><span>على أصوله</span></h1>
-<p class="mx-sub">وصفات بيتي مجرّبة بمقادير مظبوطة وخطوات مرسومة سهلة، من الكشري والمحشي لحد أم علي. هتطلع أحلى أكل مصري من أول مرة.</p>
+<p class="mx-sub">وصفات بيتي مجرّبة بمقادير مظبوطة وخطوات مرسومة سهلة، من الكشري والمحشي لحد الكنافة وأم علي. هتطلع أحلى أكل مصري من أول مرة.</p>
 <div class="mx-cta"><a href="#recipes" class="mx-btn">شوف الوصفات <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a><a href="#how" class="mx-btn mx-btn-w">بتتعلم إزاي؟</a></div>
-<p class="mx-tiny">صُنع بحب في مصر</p><p class="mx-rate">4.9 من 3,400+ بيت بيطبخ معانا</p>
-<span class="mx-stars" aria-label="4.9 من 5"><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g0"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g0)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g1"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g1)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g2"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g2)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g3"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g3)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g4"><stop offset="90%" stop-color="#f6c21a"/><stop offset="90%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g4)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg></span></section>
-<section class="mx-art"><video id="chefv" autoplay loop muted playsinline preload="auto" poster="assets/chef.webp" aria-label="شيف روبوت برتقالي بيطبخ في مطبخ مصري"><source src="assets/chef-cooking.mp4" type="video/mp4"></video></section></main>
-<section class="mx-section" id="recipes"><div class="mx-sec-head"><h2>أشهر الأكلات المصرية</h2><p>اختار الأكلة اللي نفسك فيها. كل وصفة بمقادير وخطوات مرسومة.</p></div>
+<p class="mx-rate">4.9 من 3,400+ بيت بيطبخ معانا</p>
+<span class="mx-stars" aria-label="4.9 من 5" id="stars"></span></section>
+<section><div class="mx-frame"><div class="mx-frame-in"><video id="chefv" autoplay loop muted playsinline preload="auto" poster="assets/chef.webp" aria-label="شيف روبوت برتقالي بيطبخ في مطبخ مصري"><source src="assets/chef-cooking.mp4" type="video/mp4"></video></div></div></section></div></div></main>
+<section class="mx-section mx-alt" style="padding-block:clamp(30px,4vw,56px)"><div class="wrap"><div class="mx-stats rv"><div class="mx-stat"><b>22</b><span>وصفة مصرية</span></div><div class="mx-stat"><b>4</b><span>خطوات مرسومة لكل وصفة</span></div><div class="mx-stat"><b>3,400+</b><span>بيت بيطبخ معانا</span></div><div class="mx-stat"><b>100%</b><span>مقادير مجرّبة</span></div></div></div></section>
+<section class="mx-section" id="recipes"><div class="wrap"><div class="mx-sec-head rv"><h2>أشهر الأكلات المصرية</h2><p>اختار الأكلة اللي نفسك فيها. كل وصفة بمقادير وخطوات مرسومة.</p></div>
 <div class="mx-tools"><input class="mx-search" id="q" type="search" placeholder="دوّر على أكلة..." aria-label="بحث">
 <button class="mx-f on" data-f="الكل">الكل</button><button class="mx-f" data-f="أساسي">أساسي</button><button class="mx-f" data-f="عزومات">عزومات</button><button class="mx-f" data-f="حلويات">حلويات</button><button class="mx-f" data-f="سهل">سهل</button></div>
-<div class="mx-grid" id="grid"></div><p class="mx-empty" id="empty">مفيش أكلة بالاسم ده، جرّب كلمة تانية.</p></section>
-<section class="mx-section" id="how"><div class="mx-sec-head"><h2>بتتعلم إزاي؟</h2><p>تلات خطوات بس وتبقى شيف مصري في بيتك.</p></div>
+<div class="mx-grid" id="grid"></div><p class="mx-empty" id="empty">مفيش أكلة بالاسم ده، جرّب كلمة تانية.</p></div></section>
+<section class="mx-section mx-alt" id="how"><div class="wrap"><div class="mx-sec-head rv"><h2>بتتعلم إزاي؟</h2><p>تلات خطوات بس وتبقى شيف مصري في بيتك.</p></div>
 <div class="mx-steps">
-<div class="mx-step"><div class="mx-step-num">1</div><h3>اختار وصفتك</h3><p>من الكشري لأم علي، كل الأكلات اللي بتحبها في مكان واحد.</p></div>
-<div class="mx-step"><div class="mx-step-num">2</div><h3>جهز مقاديرك</h3><p>قايمة مقادير تقدر تعلّم عليها وتغيّر عدد الأفراد.</p></div>
-<div class="mx-step"><div class="mx-step-num">3</div><h3>اطبخ خطوة بخطوة</h3><p>كل خطوة ليها رسمة وشرح بسيط لحد ما الأكلة تطلع تحفة.</p></div>
-</div></section>
-<section class="mx-section" id="tips"><div class="mx-sec-head"><h2>نصايح المطبخ</h2></div><div class="mx-faq">
+<div class="mx-step rv"><div class="mx-step-num">1</div><h3>اختار وصفتك</h3><p>من الكشري للكنافة، كل الأكلات اللي بتحبها في مكان واحد.</p></div>
+<div class="mx-step rv"><div class="mx-step-num">2</div><h3>جهز مقاديرك</h3><p>قايمة مقادير تقدر تعلّم عليها وانت بتجهز.</p></div>
+<div class="mx-step rv"><div class="mx-step-num">3</div><h3>اطبخ خطوة بخطوة</h3><p>كل خطوة ليها رسمة وشرح بسيط لحد ما الأكلة تطلع تحفة.</p></div>
+</div></div></section>
+<section class="mx-section" id="tips"><div class="wrap"><div class="mx-sec-head rv"><h2>نصايح المطبخ</h2></div><div class="mx-faq rv">
 <details><summary>إزاي البصل المحمر يطلع مقرمش؟</summary><p>قطّعه شرائح رفيعة ومتساوية، وحمّره في زيت سخن على نار عالية وقلّب باستمرار. فرده على ورق مطبخ فوراً ومتغطيهوش.</p></details>
 <details><summary>الملوخية بتبقى لزجة ليه؟</summary><p>الورق لازم يبقى ناشف تماماً قبل التقطيع، ومتسيبش الملوخية تغلي جامد بعد ما تحطها في الشوربة.</p></details>
 <details><summary>الرز بيطلع مفلفل إزاي؟</summary><p>اغسله كويس لحد ما الميه تصفى، وحمّره دقيقة في السمنة، وحط ميه بنسبة كوباية رز لكوباية ونص ميه، وسيبه على نار هادية مقفول.</p></details>
-<details><summary>أحفظ المحشي كام يوم؟</summary><p>في التلاجة لحد 3 أيام، وفي الفريزر لحد شهرين. سخّنه على نار هادية مع شوية شوربة.</p></details></div></section>
-<section class="mx-section" id="about"><div class="mx-sec-head"><h2>عن سُفرة</h2></div><p class="mx-about">سُفرة موقع بيعلّمك الطبخ المصري البيتي من الصفر، بوصفات بسيطة ومقادير مظبوطة ورسومات لكل خطوة. هدفنا إنك تقعد على سفرتك وتقول: دي أكلة أمي.</p></section>
-<footer class="mx-footer" id="footer"><span>سُفرة © 2026</span><div class="mx-flinks"><a href="#recipes">الوصفات</a><a href="#how">بتتعلم إزاي؟</a><a href="#tips">نصايح</a><a href="#top">لفوق ↑</a></div></footer>
-</div></div></div>
+<details><summary>أحفظ المحشي كام يوم؟</summary><p>في التلاجة لحد 3 أيام، وفي الفريزر لحد شهرين. سخّنه على نار هادية مع شوية شوربة.</p></details>
+<details><summary>الطعمية بتتفتت في الزيت، أعمل إيه؟</summary><p>يبقى العجين رطب زيادة. نشّفه بشوية دقيق وسيبه يرتاح، وتأكد إن الزيت سخن كفاية قبل ما تنزلها.</p></details></div></div></section>
+<section class="mx-section mx-alt" id="about"><div class="wrap"><div class="mx-sec-head rv"><h2>عن سُفرة</h2></div><p class="mx-about rv">سُفرة موقع بيعلّمك الطبخ المصري البيتي من الصفر، بوصفات بسيطة ومقادير مظبوطة ورسومات لكل خطوة. هدفنا إنك تقعد على سفرتك وتقول: دي أكلة أمي.</p></div></section>
+<section class="mx-section"><div class="wrap"><div class="mx-band rv"><h2>جاهز تطبخ النهارده؟</h2><p>اختار أي وصفة وابدأ، المقادير والخطوات المرسومة في إيدك.</p><a href="#recipes" class="mx-btn mx-btn-w">شوف كل الوصفات</a></div></div></section>
+<div class="wrap"><footer class="mx-footer" id="footer"><span>سُفرة © 2026 · صُنع بحب في مصر</span><div class="mx-flinks"><a href="#recipes">الوصفات</a><a href="#how">بتتعلم إزاي؟</a><a href="#tips">نصايح</a><a href="#top">لفوق ↑</a></div></footer></div>
 <div class="mx-modal" id="modal" aria-hidden="true"><div class="mx-sheet" id="sheet"></div></div>
 <button class="mx-top" id="totop" aria-label="لفوق">↑</button><div class="mx-toast" id="toast"></div>
 <script>
-const R=[{"id": "kushari", "name": "كشري", "time": "45 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الأكلة الشعبية الأولى في مصر: رز وعدس ومكرونة، مع صلصة ودقة وبصل محمر يقرمش.", "ing": ["كوباية رز مصري", "نص كوباية عدس بجبة", "نص كوباية شعرية", "كوباية مكرونة صغيرة", "2 بصلة كبيرة شرائح رفيعة", "كوباية زيت للتحمير", "نص كوباية حمص مسلوق", "4 طماطم مهروسة أو علبة صلصة", "3 فصوص توم + ملعقتين خل", "ملح وكمون وشطة"], "steps": [["اسلق العدس", "اغسل العدس وحطه في ميه مغلية لحد ما يبقى شبه مستوي (حوالي 15 دقيقة) وصفّيه. اغسل الرز كويس."], ["اعمل الرز والمكرونة", "حمّر الشعرية في معلقة زيت، ضيف الرز والعدس وميه ضعف الرز ونص وملح، واتركه على نار هادية 20 دقيقة. اسلق المكرونة في حلة تانية وصفّيها."], ["حمّر البصل", "قلّي البصل في زيت سخن على نار عالية وقلّبه لحد ما يبقى دهبي غامق ومقرمش، وفرده على ورق مطبخ."], ["اعمل الدقة وقدّم", "سخّن الصلصة مع التوم والخل والكمون والملح. في طبق: رز وعدس، مكرونة، حمص، صلصة، وبصل محمر على الوش."]], "img": "assets/kushari.webp", "stepimgs": ["assets/steps/kushari-1.webp", "assets/steps/kushari-2.webp", "assets/steps/kushari-3.webp", "assets/steps/kushari-4.webp"]}, {"id": "mahshi", "name": "محشي", "time": "ساعة ونص", "level": "متوسط", "cat": "أساسي", "serv": 6, "desc": "ورق عنب وكوسة وبتنجان وفلفل، محشوين رز بالشبت والبقدونس على نار هادية.", "ing": ["كيلو كوسة وفلفل ألوان", "نص كيلو ورق عنب", "2 كوباية رز مصري", "3 طماطم مقطعة", "بصلتين مفرومين", "حزمة شبت وبقدونس وكزبرة", "3 معالق صلصة", "ملعقتين سمنة", "ملح وفلفل أسود وكمون", "كوباية شوربة أو ميه للطبخ"], "steps": [["نضّف وفرّغ الخضار", "اغسل الكوسة والفلفل، واستخدم الشاكوش أو المخرطة تفرّغ الكوسة من جوه. انزع الساق من الفلفل."], ["حضّر الحشو", "اخلط الرز المغسول مع الطماطم والبصل والأعشاب المفرومة والصلصة والسمنة والتوابل لحد ما يتجانس."], ["احشي ولف", "املا الخضار بالحشو لتلات تربع بس عشان الرز يكبر. لف ورق العنب لفايف ناعمة ورفيعة."], ["رصّ واطبخ", "رص المحشي في حلة بالتراص، صب الشوربة والصلصة لحد ما تغطيه، وضع طبق فوقه. سيبه على نار هادية ساعة لحد ما الرز يستوي."]], "img": "assets/mahshi.webp", "stepimgs": ["assets/steps/mahshi-1.webp", "assets/steps/mahshi-2.webp", "assets/steps/mahshi-3.webp", "assets/steps/mahshi-4.webp"]}, {"id": "molokhia", "name": "ملوخية", "time": "40 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الخضرا المحبوبة: ملوخية ورق متقطعة ناعم، مع تقلية الثوم والكزبرة اللي بتفتح النفس.", "ing": ["نص كيلو ملوخية خضرا مفرومة", "فرخة أو أرانب للشوربة", "بصلة وورق لورا وحبهان", "لتر شوربة فراخ", "6 فصوص توم مفرومة", "ملعقة كزبرة ناشفة", "ملعقة سمنة أو زيت", "عصرة ليمون", "ملح وفلفل", "رز أبيض للتقديم"], "steps": [["قطّع الملوخية", "اغسل الملوخية كويس وجففها تماماً، وقطّعها ناعم بالمفرمة أو سكينة حادة."], ["اعمل الشوربة", "اسلق الفرخة مع البصلة والورق والحبهان لحد ما تستوي، وصفّي الشوربة وسخنها للغليان."], ["ضيف الملوخية", "حط الملوخية في الشوربة وقلّب كل شوية. متسيبهاش تغلي جامد عشان لونها يفضل أخضر."], ["التقلية", "شوّح التوم في السمنة مع الكزبرة لحد ما يحمّر، وصبّها على الملوخية بصوت الشششش، وضيف عصرة ليمون وقدمها مع الرز."]], "img": "assets/molokhia.webp", "stepimgs": ["assets/steps/molokhia-1.webp", "assets/steps/molokhia-2.webp", "assets/steps/molokhia-3.webp", "assets/steps/molokhia-4.webp"]}, {"id": "fatta", "name": "فتة", "time": "ساعة", "level": "متوسط", "cat": "عزومات", "serv": 6, "desc": "فتة العزومات والأعياد: عيش محمص ورز ولحمة، مع صلصة الخل والثوم على الوش.", "ing": ["3 أرغفة عيش بلدي", "كيلو لحمة ضاني أو بقري مسلوقة", "2 كوباية رز مصري", "لتر شوربة اللحمة", "راس توم مفروم", "نص كوباية خل", "كوباية صلصة طماطم", "2 معلقة سمنة", "ملح وفلفل وكزبرة"], "steps": [["حمّص العيش", "قطّع العيش مربعات وحمّصه في الفرن لحد ما يبقى دهبي ومقرمش."], ["حضّر الرز والشوربة", "اسلق الرز بالشوربة. وزّع العيش في صينية واسكب عليه كمية من شوربة اللحمة السخنة عشان يتشرب."], ["اعمل صلصة الخل", "شوّح التوم في السمنة لحد ما يتحمّر، ضيف الخل بحذر وبعدين الصلصة وسيبها تتسبك دقيقتين."], ["قدّم الفتة", "وزّع الرز فوق العيش، ثم اللحمة، وصب الصلصة على الوش. قدّمها سخنة."]], "img": "assets/fatta.webp", "stepimgs": ["assets/steps/fatta-1.webp", "assets/steps/fatta-2.webp", "assets/steps/fatta-3.webp", "assets/steps/fatta-4.webp"]}, {"id": "hawawshi", "name": "حواوشي", "time": "50 دقيقة", "level": "سهل", "cat": "عزومات", "serv": 4, "desc": "عيش بلدي محشو لحمة متبلة على الطريقة الإسكندرانية، قرمشة وطعم نار من الفرن.", "ing": ["4 أرغفة عيش بلدي صغير", "نص كيلو لحمة مفرومة", "بصلة كبيرة مفرومة ناعم", "فلفل أخضر وبقدونس", "معلقتين سمنة", "ملح وفلفل وبهارات", "شوية دقيق أو بقسماط (اختياري)"], "steps": [["جهّز الحشو", "اخلط اللحمة مع البصل والفلفل والبقدونس والبهارات والملح بإيدك لحد ما تتماسك."], ["افتح العيش واحشي", "افتح العيش من جنبه كأنه جيب، وانشر الحشو جواه على طول بالتساوي."], ["جهّز الصينية", "دهن العيش بالسمنة من برا ورصّه في صينية الفرن."], ["اخبز وقطّع", "في فرن سخن 200 درجة لمدة 25 إلى 30 دقيقة لحد ما الوش يحمّر والحشو يستوي. قطّعه قطع وقدمه سخن."]], "img": "assets/hawawshi.webp", "stepimgs": ["assets/steps/hawawshi-1.webp", "assets/steps/hawawshi-2.webp", "assets/steps/hawawshi-3.webp", "assets/steps/hawawshi-4.webp"]}, {"id": "umali", "name": "أم علي", "time": "35 دقيقة", "level": "سهل", "cat": "حلويات", "serv": 4, "desc": "الحلو الشرقي الدافي: عيش محمر باللبن والمكسرات والزبيب، وطبقة ذهبية من الفرن.", "ing": ["نص كيلو عجين فايلو أو رقاق مخبوز", "لتر لبن", "نص كوباية سكر", "نص كوباية مكسرات مشكلة", "ربع كوباية جوز هند", "ربع كوباية زبيب", "معلقة فانيليا", "كوباية قشطة أو كريمة", "شوية قرفة"], "steps": [["كسّر الرقاق", "اخبز أو حمّص الرقاق وفتّته بإيدك في طبق فرن."], ["سخّن اللبن", "سخّن اللبن مع السكر والفانيليا لحد ما يسخن بدون ما يغلي."], ["الطبقات", "وزّع المكسرات والزبيب وجوز الهند فوق الرقاق، واسكب اللبن عليه وبعدين القشطة."], ["احمّر في الفرن", "ادخله فرن 200 درجة 10 دقايق لحد ما الوش يدهّب. رش قرفة وقدمه سخن."]], "img": "assets/umali.webp", "stepimgs": ["assets/steps/umali-1.webp", "assets/steps/umali-2.webp", "assets/steps/umali-3.webp", "assets/steps/umali-4.webp"]}];
+const R=[{"id": "kushari", "name": "كشري", "time": "45 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الأكلة الشعبية الأولى في مصر: رز وعدس ومكرونة، مع صلصة ودقة وبصل محمر يقرمش.", "ing": ["كوباية رز مصري", "نص كوباية عدس بجبة", "نص كوباية شعرية", "كوباية مكرونة صغيرة", "2 بصلة كبيرة شرائح رفيعة", "كوباية زيت للتحمير", "نص كوباية حمص مسلوق", "4 طماطم مهروسة أو علبة صلصة", "3 فصوص توم + ملعقتين خل", "ملح وكمون وشطة"], "steps": [["اسلق العدس", "اغسل العدس وحطه في ميه مغلية لحد ما يبقى شبه مستوي (حوالي 15 دقيقة) وصفّيه. اغسل الرز كويس."], ["اعمل الرز والمكرونة", "حمّر الشعرية في معلقة زيت، ضيف الرز والعدس وميه ضعف الرز ونص وملح، واتركه على نار هادية 20 دقيقة. اسلق المكرونة في حلة تانية وصفّيها."], ["حمّر البصل", "قلّي البصل في زيت سخن على نار عالية وقلّبه لحد ما يبقى دهبي غامق ومقرمش، وفرده على ورق مطبخ."], ["اعمل الدقة وقدّم", "سخّن الصلصة مع التوم والخل والكمون والملح. في طبق: رز وعدس، مكرونة، حمص، صلصة، وبصل محمر على الوش."]], "img": "assets/kushari.webp", "stepimgs": ["assets/steps/kushari-1.webp", "assets/steps/kushari-2.webp", "assets/steps/kushari-3.webp", "assets/steps/kushari-4.webp"]}, {"id": "mahshi", "name": "محشي", "time": "ساعة ونص", "level": "متوسط", "cat": "أساسي", "serv": 6, "desc": "ورق عنب وكوسة وبتنجان وفلفل، محشوين رز بالشبت والبقدونس على نار هادية.", "ing": ["كيلو كوسة وفلفل ألوان", "نص كيلو ورق عنب", "2 كوباية رز مصري", "3 طماطم مقطعة", "بصلتين مفرومين", "حزمة شبت وبقدونس وكزبرة", "3 معالق صلصة", "ملعقتين سمنة", "ملح وفلفل أسود وكمون", "كوباية شوربة أو ميه للطبخ"], "steps": [["نضّف وفرّغ الخضار", "اغسل الكوسة والفلفل، واستخدم الشاكوش أو المخرطة تفرّغ الكوسة من جوه. انزع الساق من الفلفل."], ["حضّر الحشو", "اخلط الرز المغسول مع الطماطم والبصل والأعشاب المفرومة والصلصة والسمنة والتوابل لحد ما يتجانس."], ["احشي ولف", "املا الخضار بالحشو لتلات تربع بس عشان الرز يكبر. لف ورق العنب لفايف ناعمة ورفيعة."], ["رصّ واطبخ", "رص المحشي في حلة بالتراص، صب الشوربة والصلصة لحد ما تغطيه، وضع طبق فوقه. سيبه على نار هادية ساعة لحد ما الرز يستوي."]], "img": "assets/mahshi.webp", "stepimgs": ["assets/steps/mahshi-1.webp", "assets/steps/mahshi-2.webp", "assets/steps/mahshi-3.webp", "assets/steps/mahshi-4.webp"]}, {"id": "molokhia", "name": "ملوخية", "time": "40 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الخضرا المحبوبة: ملوخية ورق متقطعة ناعم، مع تقلية الثوم والكزبرة اللي بتفتح النفس.", "ing": ["نص كيلو ملوخية خضرا مفرومة", "فرخة أو أرانب للشوربة", "بصلة وورق لورا وحبهان", "لتر شوربة فراخ", "6 فصوص توم مفرومة", "ملعقة كزبرة ناشفة", "ملعقة سمنة أو زيت", "عصرة ليمون", "ملح وفلفل", "رز أبيض للتقديم"], "steps": [["قطّع الملوخية", "اغسل الملوخية كويس وجففها تماماً، وقطّعها ناعم بالمفرمة أو سكينة حادة."], ["اعمل الشوربة", "اسلق الفرخة مع البصلة والورق والحبهان لحد ما تستوي، وصفّي الشوربة وسخنها للغليان."], ["ضيف الملوخية", "حط الملوخية في الشوربة وقلّب كل شوية. متسيبهاش تغلي جامد عشان لونها يفضل أخضر."], ["التقلية", "شوّح التوم في السمنة مع الكزبرة لحد ما يحمّر، وصبّها على الملوخية بصوت الشششش، وضيف عصرة ليمون وقدمها مع الرز."]], "img": "assets/molokhia.webp", "stepimgs": ["assets/steps/molokhia-1.webp", "assets/steps/molokhia-2.webp", "assets/steps/molokhia-3.webp", "assets/steps/molokhia-4.webp"]}, {"id": "fatta", "name": "فتة", "time": "ساعة", "level": "متوسط", "cat": "عزومات", "serv": 6, "desc": "فتة العزومات والأعياد: عيش محمص ورز ولحمة، مع صلصة الخل والثوم على الوش.", "ing": ["3 أرغفة عيش بلدي", "كيلو لحمة ضاني أو بقري مسلوقة", "2 كوباية رز مصري", "لتر شوربة اللحمة", "راس توم مفروم", "نص كوباية خل", "كوباية صلصة طماطم", "2 معلقة سمنة", "ملح وفلفل وكزبرة"], "steps": [["حمّص العيش", "قطّع العيش مربعات وحمّصه في الفرن لحد ما يبقى دهبي ومقرمش."], ["حضّر الرز والشوربة", "اسلق الرز بالشوربة. وزّع العيش في صينية واسكب عليه كمية من شوربة اللحمة السخنة عشان يتشرب."], ["اعمل صلصة الخل", "شوّح التوم في السمنة لحد ما يتحمّر، ضيف الخل بحذر وبعدين الصلصة وسيبها تتسبك دقيقتين."], ["قدّم الفتة", "وزّع الرز فوق العيش، ثم اللحمة، وصب الصلصة على الوش. قدّمها سخنة."]], "img": "assets/fatta.webp", "stepimgs": ["assets/steps/fatta-1.webp", "assets/steps/fatta-2.webp", "assets/steps/fatta-3.webp", "assets/steps/fatta-4.webp"]}, {"id": "hawawshi", "name": "حواوشي", "time": "50 دقيقة", "level": "سهل", "cat": "عزومات", "serv": 4, "desc": "عيش بلدي محشو لحمة متبلة على الطريقة الإسكندرانية، قرمشة وطعم نار من الفرن.", "ing": ["4 أرغفة عيش بلدي صغير", "نص كيلو لحمة مفرومة", "بصلة كبيرة مفرومة ناعم", "فلفل أخضر وبقدونس", "معلقتين سمنة", "ملح وفلفل وبهارات", "شوية دقيق أو بقسماط (اختياري)"], "steps": [["جهّز الحشو", "اخلط اللحمة مع البصل والفلفل والبقدونس والبهارات والملح بإيدك لحد ما تتماسك."], ["افتح العيش واحشي", "افتح العيش من جنبه كأنه جيب، وانشر الحشو جواه على طول بالتساوي."], ["جهّز الصينية", "دهن العيش بالسمنة من برا ورصّه في صينية الفرن."], ["اخبز وقطّع", "في فرن سخن 200 درجة لمدة 25 إلى 30 دقيقة لحد ما الوش يحمّر والحشو يستوي. قطّعه قطع وقدمه سخن."]], "img": "assets/hawawshi.webp", "stepimgs": ["assets/steps/hawawshi-1.webp", "assets/steps/hawawshi-2.webp", "assets/steps/hawawshi-3.webp", "assets/steps/hawawshi-4.webp"]}, {"id": "umali", "name": "أم علي", "time": "35 دقيقة", "level": "سهل", "cat": "حلويات", "serv": 4, "desc": "الحلو الشرقي الدافي: عيش محمر باللبن والمكسرات والزبيب، وطبقة ذهبية من الفرن.", "ing": ["نص كيلو عجين فايلو أو رقاق مخبوز", "لتر لبن", "نص كوباية سكر", "نص كوباية مكسرات مشكلة", "ربع كوباية جوز هند", "ربع كوباية زبيب", "معلقة فانيليا", "كوباية قشطة أو كريمة", "شوية قرفة"], "steps": [["كسّر الرقاق", "اخبز أو حمّص الرقاق وفتّته بإيدك في طبق فرن."], ["سخّن اللبن", "سخّن اللبن مع السكر والفانيليا لحد ما يسخن بدون ما يغلي."], ["الطبقات", "وزّع المكسرات والزبيب وجوز الهند فوق الرقاق، واسكب اللبن عليه وبعدين القشطة."], ["احمّر في الفرن", "ادخله فرن 200 درجة 10 دقايق لحد ما الوش يدهّب. رش قرفة وقدمه سخن."]], "img": "assets/umali.webp", "stepimgs": ["assets/steps/umali-1.webp", "assets/steps/umali-2.webp", "assets/steps/umali-3.webp", "assets/steps/umali-4.webp"]}, {"id": "taameya", "name": "طعمية", "time": "45 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الطعمية الإسكندرانية الخضرا: فول مقشر وأعشاب، مقرمشة من برا وخضرا هشة من جوه.", "ing": ["نص كيلو فول مقشر منقوع من الليلة", "حزمة بقدونس وكزبرة وشبت", "بصلة وراس توم", "معلقة كمون وملعقة كزبرة ناشفة", "ملح وفلفل", "نص معلقة بيكنج صودا", "سمسم للتزيين", "زيت غزير للقلي"], "steps": [["انقع الفول", "انقع الفول المقشر في ميه من الليلة اللي قبلها، وصفّيه كويس وجهّز الأعشاب مغسولة."], ["اطحن العجينة", "افرم الفول مع الأعشاب والبصل والتوم في محضّرة الأكل لحد ما يبقى معجون أخضر ناعم، وضيف التوابل والبيكنج صودا."], ["شكّل الأقراص", "شكّل العجينة أقراص صغيرة بالمعلقة أو قالب الطعمية، ورش السمسم على الوش."], ["اتقلي", "في زيت سخن غزير، اقلي الطعمية لحد ما تبقى دهبي مقرمش من الناحيتين، وصفّيها على ورق مطبخ وقدّمها مع طحينة وسلطة."]], "img": "assets/taameya.webp", "stepimgs": ["assets/steps/taameya-1.webp", "assets/steps/taameya-2.webp", "assets/steps/taameya-3.webp", "assets/steps/taameya-4.webp"]}, {"id": "foul", "name": "فول مدمس", "time": "ساعتين", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "فطار المصريين الأول: فول مدمس مهروس بالتوم والليمون وزيت الزيتون والكمون.", "ing": ["كوبايتين فول مدمس مسلوق", "3 فصوص توم", "عصرة ليمونة", "معلقتين زيت زيتون", "طماطم وبقدونس وفلفل أخضر", "معلقة كمون", "ملح وشطة", "عيش بلدي للتقديم"], "steps": [["سلّق الفول", "استوي الفول في حلة على نار هادية ساعتين لحد ما يبقى طري تماماً، وتبقى الميه مغطياه."], ["اهرس وتبّل", "هرس نصه بالشوكة في طبق وضيف التوم المدقوق والليمون والكمون والملح."], ["جهز الإضافات", "قطّع الطماطم والبقدونس والفلفل الأخضر ناعم وشوحهم دقيقة مع شوية زيت."], ["قدّم", "صب الفول في طبق عميق، رش الطماطم عليه وزيت الزيتون، وقدمه مع العيش البلدي والمخلل."]], "img": "assets/foul.webp", "stepimgs": ["assets/steps/foul-1.webp", "assets/steps/foul-2.webp", "assets/steps/foul-3.webp", "assets/steps/foul-4.webp"]}, {"id": "kebda", "name": "كبدة إسكندراني", "time": "25 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "كبدة نار على الطريقة الإسكندرانية: حارة بالتوم والفلفل وجنب عيش بلدي وليمون.", "ing": ["نص كيلو كبدة بتلو", "6 فصوص توم", "فلفل أخضر حار وأحمر", "2 معلقة زيت أو سمنة", "معلقة كمون وملعقة كزبرة", "ملح وفلفل أسود", "عصرة ليمون", "عيش بلدي"], "steps": [["قطّع الكبدة", "نضّف الكبدة وقطّعها شرايح رفيعة مستطيلة وجففها بورق مطبخ."], ["جهّز الخلطة", "قطّع التوم والفلفل الحار والأخضر شرايح رفيعة."], ["حمّرها على نار عالية", "سخّن الطاسة جداً وضيف الزيت والتوم والفلفل ثانية، وحط الكبدة وقلّب سريع من 4 إلى 5 دقايق بس عشان متنشفش."], ["قدّم", "ضيف الكمون والملح والليمون في الآخر، واحشيها في عيش بلدي أو قدمها في طبق مع المخلل."]], "img": "assets/kebda.webp", "stepimgs": ["assets/steps/kebda-1.webp", "assets/steps/kebda-2.webp", "assets/steps/kebda-3.webp", "assets/steps/kebda-4.webp"]}, {"id": "mombar", "name": "ممبار", "time": "ساعتين", "level": "صعب", "cat": "عزومات", "serv": 6, "desc": "ممبار محشي رز بالأعشاب والتوابل، بيتسلق وبعدين يتحمر ويتقطع حلقات.", "ing": ["نص كيلو ممبار نضيف", "2 كوباية رز مصري", "حزمة بقدونس وشبت", "3 طماطم مفرومة", "بصلة مبشورة", "معلقتين صلصة", "معلقتين سمنة", "ملح وفلفل وكمون وبهارات", "ليمون وخل للتنضيف"], "steps": [["نضّف الممبار", "اغسل الممبار كويس بالليمون والخل والملح وصفّيه."], ["اعمل الحشو", "اخلط الرز مع الأعشاب والطماطم والبصل والصلصة والسمنة والتوابل."], ["احشي واربط", "احشي الممبار بالقمع بتلات تربع بس، واربط كل حتة بخيط عشان الرز يكبر."], ["اسلق وحمّر", "اسلقه على نار هادية ساعة ونص، وبعدين حمّره في السمنة لحد ما يبقى دهبي وقطّعه حلقات."]], "img": "assets/mombar.webp", "stepimgs": ["assets/steps/mombar-1.webp", "assets/steps/mombar-2.webp", "assets/steps/mombar-3.webp", "assets/steps/mombar-4.webp"]}, {"id": "konafa", "name": "كنافة بالقشطة", "time": "ساعة", "level": "متوسط", "cat": "حلويات", "serv": 6, "desc": "كنافة دهبية مقرمشة من برا وقشطة كريمي من جوه، وقطر بارد على الوش.", "ing": ["نص كيلو عجينة كنافة شعر", "نص كوباية سمنة مدوبة", "كوباية قشطة أو كريمة", "نص كوباية لبن بودرة", "كوباية سكر وكوباية ميه للقطر", "شوية عصير ليمون", "فستق مجروش", "ماء ورد (اختياري)"], "steps": [["ادعك العجين", "فرّط عجينة الكنافة بإيدك وادعكها بالسمنة المدوبة لحد ما تتغطى كلها."], ["اعمل الطبقة الأولى", "افرد نص العجين في صينية دايرية وكبسه، وافرد القشطة على كل الوش."], ["غطّي وادخل الفرن", "غطّي بباقي العجين وكبسه، واخبزها في فرن 180 درجة نص ساعة لحد ما تدهب."], ["القطر والتقديم", "اغلي السكر مع الميه والليمون 10 دقايق لحد ما يتقل، وصبه بارد على الكنافة السخنة ورش الفستق."]], "img": "assets/konafa.webp", "stepimgs": ["assets/steps/konafa-1.webp", "assets/steps/konafa-2.webp", "assets/steps/konafa-3.webp", "assets/steps/konafa-4.webp"]}, {"id": "basbousa", "name": "بسبوسة", "time": "50 دقيقة", "level": "سهل", "cat": "حلويات", "serv": 8, "desc": "بسبوسة السميد الطرية بالزبادي وجوز الهند، بحبة لوز على كل قطعة وقطر فوقها.", "ing": ["2 كوباية سميد", "كوباية سكر", "كوباية زبادي", "نص كوباية سمنة مدوبة", "نص كوباية جوز هند", "معلقة بيكنج بودر", "لوز للتزيين", "قطر: كوباية سكر ونص كوباية ميه وليمون"], "steps": [["اخلط المكونات", "اخلط السميد والسكر والزبادي والسمنة وجوز الهند والبيكنج بودر لحد ما تتجانس وسيبه يرتاح 15 دقيقة."], ["افرد وقطّع", "افرد الخليط في صينية متدهنة وقطّعه معينات، وحط في كل واحدة حبة لوز."], ["اخبز", "ادخلها فرن 180 درجة 35 دقيقة لحد ما تحمّر."], ["القطر", "صب القطر البارد على البسبوسة السخنة من الفرن وسيبها تشربه قبل التقديم."]], "img": "assets/basbousa.webp", "stepimgs": ["assets/steps/basbousa-1.webp", "assets/steps/basbousa-2.webp", "assets/steps/basbousa-3.webp", "assets/steps/basbousa-4.webp"]}, {"id": "qatayef", "name": "قطايف", "time": "40 دقيقة", "level": "متوسط", "cat": "حلويات", "serv": 6, "desc": "قطايف رمضان المحشية مكسرات أو قشطة، مقرمشة وبتتغمس في القطر.", "ing": ["كوباية دقيق", "نص كوباية سميد", "معلقة سكر وملعقة خميرة", "كوبايتين ميه دافية", "حشو: مكسرات أو قشطة", "سمنة للقلي أو الفرن", "قطر بارد", "فستق مجروش"], "steps": [["اعمل العجينة", "اخلط الدقيق والسميد والسكر والخميرة والميه واضرب الخليط وسيبه يتخمر 30 دقيقة."], ["اعمل الأقراص", "صب العجين دواير صغيرة على طاسة سخنة من غير دهن، وارفعها لما تبقى فقاقيع من فوق وتنشف."], ["احشي وقفّل", "حط الحشو في نص القرص، اطبقه نص دايرة، واضغط على الأطراف كويس."], ["اقلي واغمس", "اقلي أو اخبز القطايف لحد ما تدهب، واغمسها في القطر البارد ورش الفستق."]], "img": "assets/qatayef.webp", "stepimgs": ["assets/steps/qatayef-1.webp", "assets/steps/qatayef-2.webp", "assets/steps/qatayef-3.webp", "assets/steps/qatayef-4.webp"]}, {"id": "sayadeya", "name": "صيادية", "time": "ساعة ونص", "level": "متوسط", "cat": "أساسي", "serv": 4, "desc": "أكلة إسكندرية الأشهر: سمك مقلي على رز بني بالبصل المحمر وصوص الطحينة.", "ing": ["كيلو سمك بوري أو دنيس", "كوبايتين رز مصري", "4 بصلات شرائح", "6 فصوص توم", "معلقة كمون وملعقة كزبرة", "ملح وفلفل", "زيت للقلي", "طحينة وليمون للتقديم"], "steps": [["اقلي السمك", "تبّل السمك بالملح والكمون والليمون واقليه في زيت سخن لحد ما يبقى دهبي."], ["حمّر البصل", "حمّر البصل في زيت لحد ما يبقى بني غامق، وضيف نصه مع ميه تغلي عشان تعمل شوربة بنية."], ["اطبخ الرز", "صفّي الشوربة وضيف الرز المغسول والتوم والكمون، واتركه على نار هادية 20 دقيقة لحد ما يستوي."], ["قدّم", "وزّع الرز في طبق، وحط السمك فوقه، وزيّن بالبصل المحمر وقدمه مع الطحينة والليمون."]], "img": "assets/sayadeya.webp", "stepimgs": ["assets/steps/sayadeya-1.webp", "assets/steps/sayadeya-2.webp", "assets/steps/sayadeya-3.webp", "assets/steps/sayadeya-4.webp"]}, {"id": "taameya", "name": "طعمية", "time": "45 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "الطعمية الإسكندرانية الخضرا: فول مقشر وأعشاب، مقرمشة من برا وخضرا هشة من جوه.", "ing": ["نص كيلو فول مقشر منقوع من الليلة", "حزمة بقدونس وكزبرة وشبت", "بصلة وراس توم", "معلقة كمون وملعقة كزبرة ناشفة", "ملح وفلفل", "نص معلقة بيكنج صودا", "سمسم للتزيين", "زيت غزير للقلي"], "steps": [["انقع الفول", "انقع الفول المقشر في ميه من الليلة اللي قبلها، وصفّيه كويس وجهّز الأعشاب مغسولة."], ["اطحن العجينة", "افرم الفول مع الأعشاب والبصل والتوم في محضّرة الأكل لحد ما يبقى معجون أخضر ناعم، وضيف التوابل والبيكنج صودا."], ["شكّل الأقراص", "شكّل العجينة أقراص صغيرة بالمعلقة أو قالب الطعمية، ورش السمسم على الوش."], ["اتقلي", "في زيت سخن غزير، اقلي الطعمية لحد ما تبقى دهبي مقرمش من الناحيتين، وصفّيها على ورق مطبخ وقدّمها مع طحينة وسلطة."]], "img": "assets/taameya.webp", "stepimgs": ["assets/steps/taameya-1.webp", "assets/steps/taameya-2.webp", "assets/steps/taameya-3.webp", "assets/steps/taameya-4.webp"]}, {"id": "foul", "name": "فول مدمس", "time": "ساعتين", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "فطار المصريين الأول: فول مدمس مهروس بالتوم والليمون وزيت الزيتون والكمون.", "ing": ["كوبايتين فول مدمس مسلوق", "3 فصوص توم", "عصرة ليمونة", "معلقتين زيت زيتون", "طماطم وبقدونس وفلفل أخضر", "معلقة كمون", "ملح وشطة", "عيش بلدي للتقديم"], "steps": [["سلّق الفول", "استوي الفول في حلة على نار هادية ساعتين لحد ما يبقى طري تماماً، وتبقى الميه مغطياه."], ["اهرس وتبّل", "هرس نصه بالشوكة في طبق وضيف التوم المدقوق والليمون والكمون والملح."], ["جهز الإضافات", "قطّع الطماطم والبقدونس والفلفل الأخضر ناعم وشوحهم دقيقة مع شوية زيت."], ["قدّم", "صب الفول في طبق عميق، رش الطماطم عليه وزيت الزيتون، وقدمه مع العيش البلدي والمخلل."]], "img": "assets/foul.webp", "stepimgs": ["assets/steps/foul-1.webp", "assets/steps/foul-2.webp", "assets/steps/foul-3.webp", "assets/steps/foul-4.webp"]}, {"id": "kebda", "name": "كبدة إسكندراني", "time": "25 دقيقة", "level": "سهل", "cat": "أساسي", "serv": 4, "desc": "كبدة نار على الطريقة الإسكندرانية: حارة بالتوم والفلفل وجنب عيش بلدي وليمون.", "ing": ["نص كيلو كبدة بتلو", "6 فصوص توم", "فلفل أخضر حار وأحمر", "2 معلقة زيت أو سمنة", "معلقة كمون وملعقة كزبرة", "ملح وفلفل أسود", "عصرة ليمون", "عيش بلدي"], "steps": [["قطّع الكبدة", "نضّف الكبدة وقطّعها شرايح رفيعة مستطيلة وجففها بورق مطبخ."], ["جهّز الخلطة", "قطّع التوم والفلفل الحار والأخضر شرايح رفيعة."], ["حمّرها على نار عالية", "سخّن الطاسة جداً وضيف الزيت والتوم والفلفل ثانية، وحط الكبدة وقلّب سريع من 4 إلى 5 دقايق بس عشان متنشفش."], ["قدّم", "ضيف الكمون والملح والليمون في الآخر، واحشيها في عيش بلدي أو قدمها في طبق مع المخلل."]], "img": "assets/kebda.webp", "stepimgs": ["assets/steps/kebda-1.webp", "assets/steps/kebda-2.webp", "assets/steps/kebda-3.webp", "assets/steps/kebda-4.webp"]}, {"id": "mombar", "name": "ممبار", "time": "ساعتين", "level": "صعب", "cat": "عزومات", "serv": 6, "desc": "ممبار محشي رز بالأعشاب والتوابل، بيتسلق وبعدين يتحمر ويتقطع حلقات.", "ing": ["نص كيلو ممبار نضيف", "2 كوباية رز مصري", "حزمة بقدونس وشبت", "3 طماطم مفرومة", "بصلة مبشورة", "معلقتين صلصة", "معلقتين سمنة", "ملح وفلفل وكمون وبهارات", "ليمون وخل للتنضيف"], "steps": [["نضّف الممبار", "اغسل الممبار كويس بالليمون والخل والملح وصفّيه."], ["اعمل الحشو", "اخلط الرز مع الأعشاب والطماطم والبصل والصلصة والسمنة والتوابل."], ["احشي واربط", "احشي الممبار بالقمع بتلات تربع بس، واربط كل حتة بخيط عشان الرز يكبر."], ["اسلق وحمّر", "اسلقه على نار هادية ساعة ونص، وبعدين حمّره في السمنة لحد ما يبقى دهبي وقطّعه حلقات."]], "img": "assets/mombar.webp", "stepimgs": ["assets/steps/mombar-1.webp", "assets/steps/mombar-2.webp", "assets/steps/mombar-3.webp", "assets/steps/mombar-4.webp"]}, {"id": "konafa", "name": "كنافة بالقشطة", "time": "ساعة", "level": "متوسط", "cat": "حلويات", "serv": 6, "desc": "كنافة دهبية مقرمشة من برا وقشطة كريمي من جوه، وقطر بارد على الوش.", "ing": ["نص كيلو عجينة كنافة شعر", "نص كوباية سمنة مدوبة", "كوباية قشطة أو كريمة", "نص كوباية لبن بودرة", "كوباية سكر وكوباية ميه للقطر", "شوية عصير ليمون", "فستق مجروش", "ماء ورد (اختياري)"], "steps": [["ادعك العجين", "فرّط عجينة الكنافة بإيدك وادعكها بالسمنة المدوبة لحد ما تتغطى كلها."], ["اعمل الطبقة الأولى", "افرد نص العجين في صينية دايرية وكبسه، وافرد القشطة على كل الوش."], ["غطّي وادخل الفرن", "غطّي بباقي العجين وكبسه، واخبزها في فرن 180 درجة نص ساعة لحد ما تدهب."], ["القطر والتقديم", "اغلي السكر مع الميه والليمون 10 دقايق لحد ما يتقل، وصبه بارد على الكنافة السخنة ورش الفستق."]], "img": "assets/konafa.webp", "stepimgs": ["assets/steps/konafa-1.webp", "assets/steps/konafa-2.webp", "assets/steps/konafa-3.webp", "assets/steps/konafa-4.webp"]}, {"id": "basbousa", "name": "بسبوسة", "time": "50 دقيقة", "level": "سهل", "cat": "حلويات", "serv": 8, "desc": "بسبوسة السميد الطرية بالزبادي وجوز الهند، بحبة لوز على كل قطعة وقطر فوقها.", "ing": ["2 كوباية سميد", "كوباية سكر", "كوباية زبادي", "نص كوباية سمنة مدوبة", "نص كوباية جوز هند", "معلقة بيكنج بودر", "لوز للتزيين", "قطر: كوباية سكر ونص كوباية ميه وليمون"], "steps": [["اخلط المكونات", "اخلط السميد والسكر والزبادي والسمنة وجوز الهند والبيكنج بودر لحد ما تتجانس وسيبه يرتاح 15 دقيقة."], ["افرد وقطّع", "افرد الخليط في صينية متدهنة وقطّعه معينات، وحط في كل واحدة حبة لوز."], ["اخبز", "ادخلها فرن 180 درجة 35 دقيقة لحد ما تحمّر."], ["القطر", "صب القطر البارد على البسبوسة السخنة من الفرن وسيبها تشربه قبل التقديم."]], "img": "assets/basbousa.webp", "stepimgs": ["assets/steps/basbousa-1.webp", "assets/steps/basbousa-2.webp", "assets/steps/basbousa-3.webp", "assets/steps/basbousa-4.webp"]}, {"id": "qatayef", "name": "قطايف", "time": "40 دقيقة", "level": "متوسط", "cat": "حلويات", "serv": 6, "desc": "قطايف رمضان المحشية مكسرات أو قشطة، مقرمشة وبتتغمس في القطر.", "ing": ["كوباية دقيق", "نص كوباية سميد", "معلقة سكر وملعقة خميرة", "كوبايتين ميه دافية", "حشو: مكسرات أو قشطة", "سمنة للقلي أو الفرن", "قطر بارد", "فستق مجروش"], "steps": [["اعمل العجينة", "اخلط الدقيق والسميد والسكر والخميرة والميه واضرب الخليط وسيبه يتخمر 30 دقيقة."], ["اعمل الأقراص", "صب العجين دواير صغيرة على طاسة سخنة من غير دهن، وارفعها لما تبقى فقاقيع من فوق وتنشف."], ["احشي وقفّل", "حط الحشو في نص القرص، اطبقه نص دايرة، واضغط على الأطراف كويس."], ["اقلي واغمس", "اقلي أو اخبز القطايف لحد ما تدهب، واغمسها في القطر البارد ورش الفستق."]], "img": "assets/qatayef.webp", "stepimgs": ["assets/steps/qatayef-1.webp", "assets/steps/qatayef-2.webp", "assets/steps/qatayef-3.webp", "assets/steps/qatayef-4.webp"]}, {"id": "sayadeya", "name": "صيادية", "time": "ساعة ونص", "level": "متوسط", "cat": "أساسي", "serv": 4, "desc": "أكلة إسكندرية الأشهر: سمك مقلي على رز بني بالبصل المحمر وصوص الطحينة.", "ing": ["كيلو سمك بوري أو دنيس", "كوبايتين رز مصري", "4 بصلات شرائح", "6 فصوص توم", "معلقة كمون وملعقة كزبرة", "ملح وفلفل", "زيت للقلي", "طحينة وليمون للتقديم"], "steps": [["اقلي السمك", "تبّل السمك بالملح والكمون والليمون واقليه في زيت سخن لحد ما يبقى دهبي."], ["حمّر البصل", "حمّر البصل في زيت لحد ما يبقى بني غامق، وضيف نصه مع ميه تغلي عشان تعمل شوربة بنية."], ["اطبخ الرز", "صفّي الشوربة وضيف الرز المغسول والتوم والكمون، واتركه على نار هادية 20 دقيقة لحد ما يستوي."], ["قدّم", "وزّع الرز في طبق، وحط السمك فوقه، وزيّن بالبصل المحمر وقدمه مع الطحينة والليمون."]], "img": "assets/sayadeya.webp", "stepimgs": ["assets/steps/sayadeya-1.webp", "assets/steps/sayadeya-2.webp", "assets/steps/sayadeya-3.webp", "assets/steps/sayadeya-4.webp"]}];
 const $=s=>document.querySelector(s);
+$('#stars').innerHTML=[0,1,2,3,4].map(i=>`<svg viewBox="0 0 24 24" width="20" height="20"><defs><linearGradient id="g${i}"><stop offset="${i==4?90:100}%" stop-color="#f6c21a"/><stop offset="${i==4?90:100}%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g${i})" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>`).join('');
 let flt='الكل',qs='';
 const grid=$('#grid');
+function reveal(root){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});(root||document).querySelectorAll('.rv:not(.in)').forEach(x=>io.observe(x))}
 function render(){
  const l=R.filter(r=>(flt==='الكل'||r.cat===flt||r.level===flt)&&(!qs||r.name.includes(qs)||r.desc.includes(qs)));
- grid.innerHTML=l.map(r=>`<article class="mx-dish"><img loading="lazy" alt="${r.name}" src="${r.img}" data-open="${r.id}"><div class="mx-dish-body"><h3>${r.name}</h3><p>${r.desc}</p><div class="mx-chips"><span class="mx-chip">${r.time}</span><span class="mx-chip">${r.level}</span></div><button type="button" class="mx-dish-btn" data-open="${r.id}">شوف الوصفة</button></div></article>`).join('');
- $('#empty').style.display=l.length?'none':'block';
+ grid.innerHTML=l.map(r=>`<article class="mx-dish rv"><div class="ph"><img loading="lazy" alt="${r.name}" src="${r.img}" data-open="${r.id}"></div><div class="mx-dish-body"><h3>${r.name}</h3><p>${r.desc}</p><div class="mx-chips"><span class="mx-chip">${r.time}</span><span class="mx-chip">${r.level}</span><span class="mx-chip">${r.cat}</span></div><button type="button" class="mx-dish-btn" data-open="${r.id}">شوف الوصفة</button></div></article>`).join('');
+ $('#empty').style.display=l.length?'none':'block';reveal(grid);
 }
-render();
+render();reveal();
 document.querySelectorAll('.mx-f').forEach(b=>b.onclick=()=>{flt=b.dataset.f;document.querySelectorAll('.mx-f').forEach(x=>x.classList.toggle('on',x===b));render()});
 $('#q').oninput=e=>{qs=e.target.value.trim();render()};
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');setTimeout(()=>e.classList.remove('on'),1800)}
 let cur=null,sv=1;
-function fmt(t,k){return k===1?t:t.replace(/(^|\s)(\d+)(?=\s)/,(m,a,n)=>a+Math.round(n*k*10)/10)}
 function open_(id,push=true){
- const i=R.findIndex(r=>r.id===id);if(i<0)return;cur=i;const r=R[i];sv=r.serv;
+ const i=R.findIndex(r=>r.id===id);if(i<0)return;cur=i;const r=R[i];
  const nx=R[(i+1)%R.length],pv=R[(i+R.length-1)%R.length];
  const sh=$('#sheet');
  sh.innerHTML=`<button class="mx-x" id="cl" aria-label="إغلاق">✕</button><h2>${r.name}</h2><div class="mx-chips"><span class="mx-chip">${r.time}</span><span class="mx-chip">${r.level}</span><span class="mx-chip">${r.cat}</span></div>
  <img class="cover" alt="${r.name}" src="${r.img}">
- <div class="mx-ing"><h3>المقادير</h3><div class="mx-sp">عدد الأفراد: <button id="mn">−</button><span id="sv">${sv}</span><button id="pl">+</button></div><div id="il"></div></div>
+ <div class="mx-ing"><h3>المقادير</h3><div id="il">${r.ing.map(t=>`<label><input type="checkbox"><span>${t}</span></label>`).join('')}</div></div>
  <div class="mx-stps"><h3>الخطوات (دوس على الخطوة لما تخلصها)</h3>${r.steps.map((s,k)=>`<div class="mx-st" data-k="${k}"><img loading="lazy" alt="${s[0]}" src="${r.stepimgs[k]}"><div><h4><b>${k+1}</b>${s[0]}</h4><p>${s[1]}</p></div></div>`).join('')}</div>
  <div class="mx-acts"><a class="mx-btn" id="wa" target="_blank" rel="noopener">ابعتها واتساب</a><button class="mx-btn mx-btn-w" id="cp">انسخ اللينك</button><button class="mx-btn mx-btn-w" id="pr">اطبع الوصفة</button></div>
  <div class="mx-acts"><button class="mx-btn mx-btn-w" id="pvb">← ${pv.name}</button><button class="mx-btn mx-btn-w" id="nxb">${nx.name} →</button></div>`;
- const il=()=>{$('#il').innerHTML=r.ing.map((t,k)=>`<label><input type="checkbox"><span>${fmt(t,sv/r.serv)}</span></label>`).join('');$('#sv').textContent=sv};il();
- $('#mn').onclick=()=>{if(sv>1){sv--;il()}};$('#pl').onclick=()=>{if(sv<24){sv++;il()}};
  sh.querySelectorAll('.mx-st').forEach(e=>e.onclick=()=>e.classList.toggle('done'));
  const url=location.origin+location.pathname+'#'+id;
  $('#wa').href='https://wa.me/?text='+encodeURIComponent('وصفة '+r.name+' من سُفرة: '+url);
@@ -191,12 +197,12 @@ function close_(){$('#modal').classList.remove('open');document.body.style.overf
 document.addEventListener('click',e=>{
  const o=e.target.closest('[data-open]');if(o){e.preventDefault();open_(o.dataset.open);return}
  if(e.target===$('#modal'))close_();
- const a=e.target.closest('.mx-links a');if(a)$('#links').classList.remove('open');
+ if(e.target.closest('.mx-links a'))$('#links').classList.remove('open');
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close_()});
 $('#burger').onclick=()=>$('#links').classList.toggle('open');
 function route(){const id=location.hash.slice(1);if(R.some(r=>r.id===id))open_(id,false);else $('#modal').classList.remove('open'),document.body.style.overflow=''}
 window.addEventListener('popstate',route);route();
-const cv=document.getElementById('chefv');if(cv){cv.play&&cv.play().catch(()=>{});}
+const cv=$('#chefv');if(cv&&cv.play)cv.play().catch(()=>{});
 const tt=$('#totop');addEventListener('scroll',()=>tt.style.display=scrollY>600?'block':'none');tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 </script></body></html>
