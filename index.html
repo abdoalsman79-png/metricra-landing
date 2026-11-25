@@ -33,9 +33,10 @@ body{background:#f5ede1;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;c
 .mx-rate{margin:26px 0 6px;font-size:14px;font-weight:700;color:#4a4038}
 .mx-stars{display:inline-flex;gap:2px;filter:drop-shadow(0 0 6px rgba(246,194,26,.7))}
 /* gradient frame (reference look) */
-.mx-frame{padding:clamp(10px,1.2vw,18px);border-radius:clamp(26px,3vw,44px);background:radial-gradient(60% 60% at 0% 55%,#f2b43a 0%,transparent 70%),radial-gradient(55% 70% at 100% 70%,#f08a24 0%,transparent 70%),radial-gradient(50% 45% at 55% 0%,#e8b84a 0%,transparent 70%),radial-gradient(50% 50% at 0% 0%,#3c7fd1 0%,transparent 70%),radial-gradient(55% 50% at 100% 0%,#3d6fc2 0%,transparent 70%),radial-gradient(60% 40% at 15% 100%,#4672c9 0%,transparent 70%),#e9923a;box-shadow:0 40px 80px -36px rgba(120,70,20,.55)}
-.mx-frame-in{border-radius:clamp(18px,2.2vw,32px);overflow:hidden;background:#efe3d3;box-shadow:0 2px 0 rgba(255,255,255,.5) inset,0 12px 40px -10px rgba(80,40,0,.3);line-height:0}
-.mx-frame-in video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+/* clean, slightly smaller hero animation */
+.mx-frame{width:92%;margin-inline:auto;padding:0;border-radius:0;background:none;box-shadow:none}
+.mx-frame-in{border-radius:22px;overflow:hidden;background:transparent;box-shadow:none;line-height:0}
+.mx-frame-in img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;filter:drop-shadow(0 18px 24px rgba(80,40,0,.16))}
 /* sections */
 .mx-section{padding-block:clamp(56px,7vw,110px)}
 .mx-alt{background:#efe3d3}
@@ -134,7 +135,7 @@ body{background:#f5ede1;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;c
 <div class="mx-cta"><a href="#recipes" class="mx-btn">شوف الوصفات <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a><a href="#how" class="mx-btn mx-btn-w">بتتعلم إزاي؟</a></div>
 <p class="mx-rate">4.9 من 3,400+ بيت بيطبخ معانا</p>
 <span class="mx-stars" aria-label="4.9 من 5" id="stars"></span></section>
-<section><div class="mx-frame"><div class="mx-frame-in"><video id="chefv" autoplay loop muted playsinline preload="auto" poster="assets/chef.webp" aria-label="شيف روبوت برتقالي بيطبخ في مطبخ مصري"><source src="assets/chef-cooking.mp4" type="video/mp4"></video></div></div></section></div></div></main>
+<section><div class="mx-frame"><div class="mx-frame-in"><img id="chefv" src="assets/chef-cooking.webp" alt="شيف روبوت برتقالي بيطبخ في مطبخ مصري" width="800" height="450" fetchpriority="high"></div></div></section></div></div></main>
 <section class="mx-section mx-alt" style="padding-block:clamp(30px,4vw,56px)"><div class="wrap"><div class="mx-stats rv"><div class="mx-stat"><b>14</b><span>وصفة مصرية</span></div><div class="mx-stat"><b>4</b><span>خطوات مرسومة لكل وصفة</span></div><div class="mx-stat"><b>3,400+</b><span>بيت بيطبخ معانا</span></div><div class="mx-stat"><b>100%</b><span>مقادير مجرّبة</span></div></div></div></section>
 <section class="mx-section" id="recipes"><div class="wrap"><div class="mx-sec-head rv"><h2>أشهر الأكلات المصرية</h2><p>اختار الأكلة اللي نفسك فيها. كل وصفة بمقادير وخطوات مرسومة.</p></div>
 <div class="mx-tools"><input class="mx-search" id="q" type="search" placeholder="دوّر على أكلة..." aria-label="بحث">
@@ -203,6 +204,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')close_()});
 $('#burger').onclick=()=>$('#links').classList.toggle('open');
 function route(){const id=location.hash.slice(1);if(R.some(r=>r.id===id))open_(id,false);else $('#modal').classList.remove('open'),document.body.style.overflow=''}
 window.addEventListener('popstate',route);route();
-const cv=$('#chefv');if(cv&&cv.play)cv.play().catch(()=>{});
+
 const tt=$('#totop');addEventListener('scroll',()=>tt.style.display=scrollY>600?'block':'none');tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 </script></body></html>
