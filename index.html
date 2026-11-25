@@ -75,7 +75,8 @@ body { background: #eee9e0; }
 html{scroll-behavior:smooth}
 .mx-card{scroll-margin-top:12px}
 section[id]{scroll-margin-top:20px}
-.mx-art img{width:100%;max-width:600px;height:auto;display:block;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%)}
+.mx-art video,.mx-art img{width:100%;max-width:600px;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%)}
+.mx-art imgX{width:100%;max-width:600px;height:auto;display:block;mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 73% 77% at 50% 50%,#000 62%,transparent 100%)}
 .mx-burger{display:none;background:#fbf4ec;border:0;border-radius:12px;width:40px;height:40px;cursor:pointer;font-size:20px}
 .mx-tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 24px}
 .mx-search{font:inherit;font-size:14px;padding:10px 16px;border-radius:999px;border:1.5px solid rgba(120,60,20,.25);background:#fbf4ec;min-width:220px;outline:none}
@@ -128,7 +129,7 @@ section[id]{scroll-margin-top:20px}
 <div class="mx-cta"><a href="#recipes" class="mx-btn">شوف الوصفات <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a><a href="#how" class="mx-btn mx-btn-w">بتتعلم إزاي؟</a></div>
 <p class="mx-tiny">صُنع بحب في مصر</p><p class="mx-rate">4.9 من 3,400+ بيت بيطبخ معانا</p>
 <span class="mx-stars" aria-label="4.9 من 5"><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g0"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g0)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g1"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g1)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g2"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g2)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g3"><stop offset="100%" stop-color="#f6c21a"/><stop offset="100%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g3)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><svg viewBox="0 0 24 24" width="17" height="17"><defs><linearGradient id="g4"><stop offset="90%" stop-color="#f6c21a"/><stop offset="90%" stop-color="#d9cbb0"/></linearGradient></defs><path fill="url(#g4)" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg></span></section>
-<section class="mx-art"><img alt="شيف روبوت برتقالي بيطبخ في مطبخ مصري" src="assets/chef.webp" width="1429" height="804" fetchpriority="high"></section></main>
+<section class="mx-art"><video id="chefv" autoplay loop muted playsinline preload="auto" poster="assets/chef.webp" aria-label="شيف روبوت برتقالي بيطبخ في مطبخ مصري"><source src="assets/chef-cooking.mp4" type="video/mp4"></video></section></main>
 <section class="mx-section" id="recipes"><div class="mx-sec-head"><h2>أشهر الأكلات المصرية</h2><p>اختار الأكلة اللي نفسك فيها. كل وصفة بمقادير وخطوات مرسومة.</p></div>
 <div class="mx-tools"><input class="mx-search" id="q" type="search" placeholder="دوّر على أكلة..." aria-label="بحث">
 <button class="mx-f on" data-f="الكل">الكل</button><button class="mx-f" data-f="أساسي">أساسي</button><button class="mx-f" data-f="عزومات">عزومات</button><button class="mx-f" data-f="حلويات">حلويات</button><button class="mx-f" data-f="سهل">سهل</button></div>
@@ -196,5 +197,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')close_()});
 $('#burger').onclick=()=>$('#links').classList.toggle('open');
 function route(){const id=location.hash.slice(1);if(R.some(r=>r.id===id))open_(id,false);else $('#modal').classList.remove('open'),document.body.style.overflow=''}
 window.addEventListener('popstate',route);route();
+const cv=document.getElementById('chefv');if(cv){cv.play&&cv.play().catch(()=>{});}
 const tt=$('#totop');addEventListener('scroll',()=>tt.style.display=scrollY>600?'block':'none');tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 </script></body></html>
