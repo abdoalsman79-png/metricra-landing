@@ -152,9 +152,108 @@ body{background:#f5ede1;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;c
 }
 @media(max-width:520px){.mx-grid{--c:1}.mx-search{min-width:0;width:100%}}
 @media print{.mx-nav-bar,.mx-x,.mx-acts,.mx-top,body>main,body>section,body>footer{display:none!important}.mx-modal{position:static;background:none;display:block!important}}
+/* === ميزات سُفرة الجديدة === */
+.sx-proverb-wrap{background:#1b1612;color:#f5ede1}
+.sx-proverb{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px 8px;font-size:15px;font-weight:700;text-align:center}
+.sx-prov-label{color:#f2b43a}
+#provtext{transition:opacity .4s}
+.sx-daily{font-size:13px;color:#d9cbb0}
+.sx-daily a{color:#f2b43a;cursor:pointer;text-decoration:underline}
+.mx-navbtn{font:inherit;font-size:14.5px;font-weight:700;border:0;background:none;cursor:pointer;color:inherit;position:relative;padding:0;transition:color .2s}
+.mx-navbtn:hover{color:#d9490f}
+.sx-badge{position:absolute;top:-9px;left:-12px;background:#d9490f;color:#fff;border-radius:999px;font-size:11px;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;padding:0 4px}
+.ph{position:relative}
+.sx-heart{position:absolute;top:10px;left:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:18px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.18);z-index:2;color:#5a4f46}
+.sx-heart.on{color:#d9490f}
+.sx-fridge{background:#fff;border-radius:22px;padding:clamp(16px,3vw,28px);box-shadow:0 12px 30px -18px rgba(60,30,10,.35);border:1px solid #efe3d3}
+.sx-fchips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.sx-fchip{font:inherit;font-size:13.5px;font-weight:700;border:1.5px solid #efe3d3;background:#fbf4ec;color:#5a4f46;border-radius:999px;padding:7px 14px;cursor:pointer;transition:all .15s}
+.sx-fchip.on{background:#d9490f;color:#fff;border-color:#d9490f}
+.sx-fsel{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.sx-fsel span{background:#1b1612;color:#fff;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer}
+.sx-fres{margin-top:18px}
+.sx-score{color:#a8431a;font-size:12.5px;font-weight:700}
+.sx-seas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.sx-sea{background:linear-gradient(135deg,#f0642a,#d9490f);color:#fff;border:0;border-radius:20px;padding:22px;cursor:pointer;text-align:right;font:inherit;box-shadow:0 10px 24px -10px rgba(217,73,15,.6);transition:transform .2s}
+.sx-sea:hover{transform:translateY(-3px)}
+.sx-sea.on{outline:3px solid #f2b43a}
+.sx-sea b{font-size:19px;display:block;margin-bottom:8px}
+.sx-sea small{opacity:.92;font-size:13px;line-height:1.7;display:block}
+.sx-rescue{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.sx-rc{background:#fff;border-radius:18px;padding:18px 20px;border:1px solid #efe3d3}
+.sx-rc b{color:#d9490f;display:block;margin-bottom:6px;font-size:15.5px}
+.sx-rc p{margin:0;font-size:14px;line-height:1.9;color:#4a4038}
+.sx-serv{font-size:13px;font-weight:700;color:#5a4f46;margin-inline-start:10px;display:inline-flex;align-items:center;gap:6px;background:#fbf4ec;border-radius:999px;padding:4px 10px}
+.sx-serv button{width:26px;height:26px;border-radius:50%;border:0;background:#d9490f;color:#fff;font-size:15px;cursor:pointer;line-height:1}
+.sx-acts{margin-top:12px}
+.sx-ov{position:fixed;inset:0;background:rgba(30,18,8,.6);backdrop-filter:blur(4px);z-index:60;display:none;overflow-y:auto;padding:clamp(8px,3vw,28px)}
+.sx-ov.open{display:block}
+.sx-box{background:#f5ede1;border-radius:22px;max-width:680px;margin:0 auto;padding:clamp(16px,3vw,26px);position:relative}
+.sx-box h2{margin:0 0 16px;font-size:24px}
+.sx-x{position:absolute;top:12px;left:12px;width:38px;height:38px;border-radius:50%;border:0;background:#fff;font-size:18px;cursor:pointer;z-index:2}
+.sx-cg{background:#fff;border-radius:16px;padding:14px 16px;margin-bottom:12px;border:1px solid #efe3d3}
+.sx-cgh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.sx-cgh a{color:#1b1612;cursor:pointer;text-decoration:underline}
+.sx-crm{font:inherit;font-size:12px;font-weight:700;color:#a8431a;background:none;border:1px solid #a8431a;border-radius:999px;padding:4px 10px;cursor:pointer}
+.sx-ci{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:13.5px}
+.sx-ci label{display:flex;gap:8px;align-items:center;cursor:pointer;color:#4a4038}
+.sx-cempty{color:#5a4f46;font-size:15px;line-height:1.9}
+.sx-pgrid{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.sx-pday{display:grid;grid-template-columns:64px 1fr 1fr 1fr;gap:8px;align-items:center}
+.sx-pday b{font-size:14px}
+.sx-pcell{font:inherit;font-size:13px;font-weight:700;border:1.5px dashed #d9cbb0;background:#fff;color:#5a4f46;border-radius:12px;padding:9px 6px;cursor:pointer;min-height:42px}
+.sx-pcell.full{border-style:solid;border-color:#d9490f;color:#d9490f}
+.sx-ppick{margin-top:14px;background:#fff;border-radius:16px;padding:14px;border:1px solid #efe3d3}
+.sx-pplist{max-height:220px;overflow-y:auto;margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sx-pplist button{font:inherit;font-size:13px;font-weight:700;text-align:right;border:0;background:#fbf4ec;border-radius:10px;padding:9px 10px;cursor:pointer}
+.sx-pplist button:hover{background:#f4e2cd}
+.sx-cook{position:fixed;inset:0;background:#1b1612;color:#f5ede1;z-index:70;display:none;flex-direction:column;padding:clamp(12px,3vw,28px);overflow-y:auto}
+.sx-cook.open{display:flex}
+.sx-cktop{display:flex;align-items:center;justify-content:space-between;font-size:18px}
+.sx-xb{width:42px;height:42px;border-radius:50%;border:0;background:#2a241e;color:#f5ede1;font-size:19px;cursor:pointer}
+.sx-cook .prog{height:6px;background:#3a322b;border-radius:99px;overflow:hidden;margin:12px 0 16px}
+.sx-cook .prog i{display:block;height:100%;background:#f2b43a;transition:width .3s}
+.sx-cook img{width:100%;max-height:36vh;object-fit:cover;border-radius:18px}
+.sx-cook h3{font-size:clamp(22px,4.5vw,32px);margin:16px 0 8px;color:#f2b43a}
+.sx-cook .txt{font-size:clamp(17px,3.2vw,25px);line-height:2;font-weight:700}
+.sx-cook .nav{display:flex;gap:10px;margin:20px 0 10px}
+.sx-cbtn{flex:1;font:inherit;font-size:16px;font-weight:800;border:0;border-radius:999px;padding:14px;cursor:pointer;background:#2a241e;color:#f5ede1}
+.sx-cbtn2{background:linear-gradient(#f0642a,#d9490f);color:#fff}
+.sx-timer{margin-top:16px;background:#2a241e;border-radius:16px;padding:14px}
+.sx-tchips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:10px}
+.sx-tchip{font:inherit;font-size:13px;font-weight:700;border:0;background:#3a322b;color:#f2b43a;border-radius:999px;padding:7px 14px;cursor:pointer}
+.sx-tdisp{font-size:clamp(36px,9vw,56px);font-weight:900;text-align:center;font-variant-numeric:tabular-nums}
+.sx-tdisp.flash{animation:sxflash 1s infinite}
+@keyframes sxflash{50%{color:#f0642a}}
+.sx-trow{display:flex;gap:8px;margin-top:10px}
+.sx-trow input{flex:1;min-width:0;font:inherit;font-size:15px;font-weight:700;background:#3a322b;border:0;color:#f5ede1;border-radius:999px;padding:10px 16px;text-align:center}
+.sx-tb{flex:1;font:inherit;font-size:14px;font-weight:800;border:0;border-radius:999px;padding:10px;cursor:pointer;background:#3a322b;color:#f5ede1}
+.sx-tb.go{background:linear-gradient(#f0642a,#d9490f);color:#fff}
+.sx-chatbtn{position:fixed;bottom:20px;left:20px;width:56px;height:56px;border-radius:50%;border:0;background:linear-gradient(#f0642a,#d9490f);color:#fff;font-size:24px;cursor:pointer;z-index:45;box-shadow:0 10px 22px -8px rgba(217,73,15,.8)}
+.sx-chat{position:fixed;bottom:86px;left:20px;width:min(360px,calc(100vw - 40px));height:min(480px,70vh);background:#fbf4ec;border-radius:20px;box-shadow:0 20px 50px -12px rgba(0,0,0,.45);z-index:65;display:none;flex-direction:column;overflow:hidden;border:1px solid #efe3d3}
+.sx-chat.open{display:flex}
+.sx-chh{background:#1b1612;color:#f5ede1;padding:12px 16px;font-weight:800;font-size:15px;display:flex;justify-content:space-between;align-items:center}
+.sx-chh button{border:0;background:none;color:#f5ede1;font-size:18px;cursor:pointer}
+.sx-chm{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px}
+.sx-msg{max-width:85%;padding:9px 13px;border-radius:14px;font-size:13.5px;line-height:1.8}
+.sx-msg.bot{background:#fff;border:1px solid #efe3d3;align-self:flex-start}
+.sx-msg.me{background:#d9490f;color:#fff;align-self:flex-end}
+.sx-msg a{color:#a8431a;cursor:pointer;font-weight:700}
+.sx-chi{display:flex;gap:8px;padding:10px;border-top:1px solid #efe3d3;background:#fff}
+.sx-chi input{flex:1;min-width:0;font:inherit;font-size:14px;border:1.5px solid #efe3d3;border-radius:999px;padding:9px 14px}
+.sx-chi button{font:inherit;font-weight:800;border:0;border-radius:999px;background:#d9490f;color:#fff;padding:9px 16px;cursor:pointer}
+.sx-budget{background:#fff;border-radius:22px;padding:clamp(16px,3vw,28px);box-shadow:0 12px 30px -18px rgba(60,30,10,.35);border:1px solid #efe3d3}
+.sx-brow{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin-bottom:16px}
+.sx-brow label{font-size:13px;font-weight:800;color:#5a4f46;display:flex;flex-direction:column;gap:6px}
+.sx-brow input{font:inherit;font-size:15px;font-weight:700;border:1.5px solid #efe3d3;border-radius:12px;padding:9px 12px;width:130px}
+.sx-bsum{font-size:14px;font-weight:800;color:#1b1612;background:#fbf4ec;border-radius:12px;padding:10px 14px}
+.sx-bsum.ok{color:#2e7d32}.sx-bsum.over{color:#c62828}
+.sx-bnote{font-size:12.5px;color:#5a4f46;margin-top:14px;line-height:1.8}
+@media(max-width:560px){.sx-ci{grid-template-columns:1fr}.sx-pday{grid-template-columns:52px 1fr 1fr 1fr}.sx-pcell{font-size:11.5px}}
 </style></head><body>
 <div class="mx-nav-bar"><div class="wrap"><header class="mx-nav"><a href="#top" style="text-decoration:none;color:inherit"><div class="mx-brand"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1b1612" stroke-width="1.8" stroke-linecap="round"><path d="M7 3v7M10.5 3v7M14 3v7M7 7h7M8.75 10v11M17.5 3c-1.5 2-2 4.5-2 6.5 0 1.5 1 2.5 2 2.5s2-1 2-2.5c0-2-.5-4.5-2-6.5zM17.5 12v9"/></svg><span>سُفرة</span></div></a>
-<nav class="mx-links" id="links"><a href="#pick">نأكل إيه؟</a><a href="#recipes">الوصفات</a><a href="#how">بتتعلم إزاي؟</a><a href="#tips">نصايح المطبخ</a><a href="#about">عن سُفرة</a></nav>
+<nav class="mx-links" id="links"><a href="#pick">نأكل إيه؟</a><a href="#recipes">الوصفات</a><a href="#how">بتتعلم إزاي؟</a><a href="#tips">نصايح المطبخ</a><a href="#about">عن سُفرة</a><a href="#fridge">التلاجة 🧊</a><a href="#seasons">المواسم 🌙</a><a href="#budget">الميزانية 💰</a><a href="#rescue">إنقاذ الأكل 🚑</a><button class="mx-navbtn" id="planbtn" type="button">📅 خطة الأسبوع</button><button class="mx-navbtn" id="cartbtn" type="button" aria-label="قايمة التسوق">🛒<span class="sx-badge" id="cartbadge" hidden>0</span></button>
+</nav>
 <button class="mx-burger" id="burger" aria-label="القائمة">☰</button>
 <a href="#" data-open="kushari" class="mx-btn mx-btn-sm">ابدأ الطبخ دلوقتي <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a></header></div></div>
 <main id="top"><div class="wrap"><div class="mx-hero"><section class="mx-copy"><span class="mx-pill"><span class="rc">29</span> وصفة مصرية وعربية أصلية، خطوة بخطوة</span>
@@ -163,16 +262,37 @@ body{background:#f5ede1;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;c
 <div class="mx-cta"><a href="#recipes" class="mx-btn">شوف الوصفات <span class="mx-arrow"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></span></a><a href="#pick" class="mx-btn mx-btn-w">🎲 نأكل إيه النهارده؟</a></div>
 <p class="mx-rate">4.9 من 3,400+ بيت بيطبخ معانا</p>
 <span class="mx-stars" aria-label="4.9 من 5" id="stars"></span></section>
-<section><div class="mx-frame"><div class="mx-frame-in"><picture><source media="(max-width:768px)" srcset="assets/chef-hero-m.webp" width="640" height="360"><img id="chefv" src="assets/chef-hero-d.webp" alt="شيف روبوت برتقالي بيطبخ في مطبخ مصري" width="800" height="450" fetchpriority="high"></picture></div></div></section></div></div></main>
+<section><div class="mx-frame"><div class="mx-frame-in"><picture><source media="(max-width:768px)" srcset="assets/chef-hero-m.webp" width="640" height="360"><img id="chefv" src="assets/chef-hero-d.webp" alt="شيف روبوت برتقالي بيطبخ في مطبخ مصري" width="800" height="450" fetchpriority="high"></picture></div></div></section></div></div></main><div class="sx-proverb-wrap"><div class="wrap"><div class="sx-proverb"><span class="sx-prov-label">المصريين بيقولوا:</span><span id="provtext"></span><span class="sx-daily">طبخة اليوم: <a id="dailydish" data-open=""></a></span></div></div></div>
+
 <section class="mx-section mx-pick" id="pick"><div class="wrap"><div class="mx-pick-card rv"><h2>نأكل <span>إيه</span> النهارده؟ 🎲</h2><p>بلاش تفضل تفكر ساعة. اختار الوجبة وسيب الباقي علينا.</p>
 <div class="mx-meals"><button class="mx-meal" data-m="فطار">🍳 فطار</button><button class="mx-meal" data-m="غدا">🍲 غدا</button><button class="mx-meal" data-m="عشا">🌙 عشا</button><button class="mx-meal any" data-m="">🎰 اختار لي أي حاجة</button></div>
 <div class="mx-reel" id="reel"><div class="mx-reel-win" id="rwin"><img id="rimg" alt="" src="assets/kushari.webp"><div class="mx-reel-name" id="rname"></div></div>
 <div class="mx-res" id="rres"><p id="rdesc"></p><div class="mx-chips" id="rchips"></div><div class="mx-acts"><button class="mx-btn" id="ropen" type="button">شوف الوصفة</button><button class="mx-btn mx-btn-w" id="ragain" type="button">🔄 لف تاني</button></div><div class="mx-sweet" id="rsweet"></div></div></div></div></div></section>
 <section class="mx-section mx-alt" style="padding-block:clamp(30px,4vw,56px)"><div class="wrap"><div class="mx-stats rv"><div class="mx-stat"><b class="rc">29</b><span>وصفة مصرية وعربية</span></div><div class="mx-stat"><b>4</b><span>خطوات مرسومة لكل وصفة</span></div><div class="mx-stat"><b>3,400+</b><span>بيت بيطبخ معانا</span></div><div class="mx-stat"><b>100%</b><span>مقادير مجرّبة</span></div></div></div></section>
+<section class="mx-section mx-alt" id="fridge"><div class="wrap"><div class="mx-sec-head rv"><h2>عندي إيه في التلاجة؟ 🧊</h2><p>اختار أو اكتب المكونات اللي عندك، وهنقولك تطبخ إيه بيها.</p></div>
+<div class="sx-fridge rv"><div class="sx-fchips" id="fchips"></div><input class="mx-search" id="finput" type="search" placeholder="اكتب مكون ودوس إنتر، مثلاً: فراخ أو رز أو بصل" aria-label="مكونات التلاجة"><div class="sx-fsel" id="fsel"></div><div class="mx-grid sx-fres" id="fres"></div><p class="mx-empty" id="fempty" style="display:none">مفيش وصفة قريبة من المكونات دي، جرّب تزود مكونات تانية.</p></div></div></section>
+<section class="mx-section" id="seasons"><div class="wrap"><div class="mx-sec-head rv"><h2>مواسم ومناسبات 🌙</h2><p>مجموعات جاهزة على قد المناسبة والمزاج.</p></div><div class="sx-seas rv" id="seas"></div></div></section>
+<section class="mx-section mx-alt" id="budget"><div class="wrap"><div class="mx-sec-head rv"><h2>ميزانية الأسبوع 💰</h2><p>قولنا عدد الأفراد والميزانية، ونرتبلك أسبوع أكلات شعبية متنوعة على قد جيبك.</p></div>
+<div class="sx-budget rv"><div class="sx-brow"><label>عدد الأفراد<input id="bppl" type="number" min="1" max="20" value="4"></label><label>ميزانية الأسبوع (جنيه)<input id="bcash" type="number" min="200" step="50" value="2000"></label><button class="mx-btn" id="bgo" type="button">🎲 خططلي الأسبوع</button><span class="sx-bsum" id="bsum"></span></div><div class="sx-pgrid" id="bgrid"></div><p class="sx-bnote">الأسعار تقديرية على أساس متوسط أسعار السوق المصري في 2026، وممكن تختلف من منطقة لتانية. الخطة بتوزن بين وصفات أساسية رخيصة وعزومة أو اتنين في الأسبوع عشان التنوع.</p></div></div></section>
 <section class="mx-section" id="recipes"><div class="wrap"><div class="mx-sec-head rv"><h2>أشهر الأكلات المصرية</h2><p>اختار الأكلة اللي نفسك فيها. كل وصفة بمقادير وخطوات مرسومة.</p></div>
 <div class="mx-tools"><input class="mx-search" id="q" type="search" placeholder="دوّر على أكلة..." aria-label="بحث">
 <button class="mx-f on" data-f="الكل">الكل</button><button class="mx-f" data-f="أساسي">أساسي</button><button class="mx-f" data-f="عزومات">عزومات</button><button class="mx-f" data-f="حلويات">حلويات</button><button class="mx-f" data-f="عربي">أكلات عربية 🌍</button><button class="mx-f" data-f="سهل">سهل</button></div>
 <div class="mx-grid" id="grid"></div><p class="mx-empty" id="empty">مفيش أكلة بالاسم ده، جرّب كلمة تانية.</p></div></section>
+<section class="mx-section" id="rescue"><div class="wrap"><div class="mx-sec-head rv"><h2>الأكل بوظ؟ متقلقش 🚑</h2><p>«ليه نرميه ما بطننا أولى بيه». كل غلطة في المطبخ ليها تصليحة.</p></div>
+<div class="sx-rescue rv">
+<div class="sx-rc"><b>🍚 الرز اتعجن من كتر الميه</b><p>افرده على صينية وسخّنه في فرن هادي 10 دقايق، أو غطّ الحلة بفوطة نضيفة تمتص البخار. ولو مستحيل، حوّله رز معمر أو شوربة.</p></div>
+<div class="sx-rc"><b>🧂 الأكل طلع مالح زيادة</b><p>ارمي شرايح بطاطس نية في الحلة ربع ساعة تمتص الملح، أو زوّد ميه أو صلصة من غير ملح، أو قدّم جنبه رز أبيض أو لبن.</p></div>
+<div class="sx-rc"><b>🔥 الحلة اتحرقت من تحت</b><p>متقلّبش عشان الطعم ما ينتشرش. انقل اللي فوق في حلة نضيفة بهدوء، وحط قطعة عيش على وش الأكل تشد ريحة الحرقان.</p></div>
+<div class="sx-rc"><b>🌶️ الشطة زيادة عن الحد</b><p>زوّد لبن أو زبادي أو قشطة أو طماطم، ورشة سكر صغيرة أو لمونة بتكسر الحرارة.</p></div>
+<div class="sx-rc"><b>🛢️ الزيت طافي على الوش</b><p>ورق مطبخ على الوش يلم الزيت الزيادة، أو صفّي المحمرات على مصفاة واشطفها بشوية ميه سخنة.</p></div>
+<div class="sx-rc"><b>🍅 الصلصة حامضة</b><p>رشة سكر صغيرة أو شوية جزر مبشور بيعادلوا الطعم على طول.</p></div>
+<div class="sx-rc"><b>🥩 اللحمة ناشفة أو مستوية زيادة</b><p>قطّعها صغير وقلّبها في صوص أو بصل متكرمل، أو فتّتها حشو لساندوتشات أو مكرونة بشاميل.</p></div>
+<div class="sx-rc"><b>🫓 العجينة لزقة ومش ماسكة</b><p>زوّد دقيق بالتدريج مع عجن خفيف، ولو فطير أو بيتزا بلّل إيدك بشوية زيت بدل الدقيق الكتير.</p></div>
+<div class="sx-rc"><b>🧆 الطعمية بتتفكك في الزيت</b><p>العجينة محتاجة تبقى أتقل شوية، زوّد فول أو رشة دقيق، والزيت لازم يكون سخن كويس قبل ما تنزّل.</p></div>
+<div class="sx-rc"><b>🍮 الكنافة أو البسبوسة ناشفة</b><p>سقّيها شربات سخن بالتدريج وهي سخنة، وهتمتص وتطري تاني.</p></div>
+<div class="sx-rc"><b>🍽️ الأكل برد قبل ما حد ياكل</b><p>رشة ميه سخنة على الوش ودقيقتين في الفرن أو الميكرويف، والشوربة أو الصلصة السخنة بترجع أي طبق للحياة.</p></div>
+<div class="sx-rc"><b>🧄 الأكل مالوش طعم</b><p>دقة سريعة في الآخر: توم مدقوق بملح وكمون وكزبرة ناشفة ولمونة، وتحس إن الأكلة اتولدت من جديد.</p></div>
+</div></div></section>
 <section class="mx-section mx-alt" id="how"><div class="wrap"><div class="mx-sec-head rv"><h2>بتتعلم إزاي؟</h2><p>تلات خطوات بس وتبقى شيف مصري في بيتك.</p></div>
 <div class="mx-steps">
 <div class="mx-step rv"><div class="mx-step-num">1</div><h3>اختار وصفتك</h3><p>من الكشري للكنافة، كل الأكلات اللي بتحبها في مكان واحد.</p></div>
@@ -273,4 +393,456 @@ document.querySelectorAll('.rc').forEach(e=>e.textContent=R.length);
 window.addEventListener('popstate',route);route();
 
 const tt=$('#totop');addEventListener('scroll',()=>tt.style.display=scrollY>600?'block':'none');tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script><button class="sx-chatbtn" id="chatbtn" type="button" aria-label="اسأل الشيف">🤖</button>
+<div class="sx-chat" id="chatbox"><div class="sx-chh"><span>اسأل الشيف 🤖</span><button type="button" id="chatx" aria-label="إغلاق">✕</button></div><div class="sx-chm" id="chatm"></div><div class="sx-chi"><input id="chati" type="text" placeholder="اسأل عن أكلة أو مكون أو مشكلة..." aria-label="سؤالك"><button id="chats" type="button">اسأل</button></div></div>
+<script>
+(function(){
+"use strict";
+var ARD={'٠':'0','١':'1','٢':'2','٣':'3','٤':'4','٥':'5','٦':'6','٧':'7','٨':'8','٩':'9'};
+function norm(s){return (s||'').replace(/[٠-٩]/g,function(c){return ARD[c]}).replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')}
+var store={get:function(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+var FAVS=new Set(store.get('sufra-fav',[])),CART=store.get('sufra-cart',[]).filter(function(id){return R.some(function(r){return r.id===id})}),PLAN=store.get('sufra-plan',{});
+function saveFav(){store.set('sufra-fav',Array.from(FAVS))}
+function saveCart(){store.set('sufra-cart',CART);badge()}
+function savePlan(){store.set('sufra-plan',PLAN)}
+var cflt=null;
+
+/* ---------- أمثال + طبخة اليوم ---------- */
+var PROVS=['ليه نرميه ما بطننا أولى بيه','لقمة هنية تكفي مية','الجعان يحلم بسوق العيش','العين بتاكل قبل البق','اللي ما يعرفش يقول عدس','كُل اللي يعجبك والبس اللي يعجب الناس','بصلة المحب خروف','زي الفريك ما يحبش شريك','إطعم الفم تستحي العين','عينه أكبر من بطنه'];
+var ptxt=document.getElementById('provtext'),pi=Math.floor(Math.random()*PROVS.length);
+function showProv(){ptxt.style.opacity=0;setTimeout(function(){ptxt.textContent='«'+PROVS[pi]+'»';ptxt.style.opacity=1},400)}
+showProv();setInterval(function(){pi=(pi+1)%PROVS.length;showProv()},9000);
+var dd=document.getElementById('dailydish');
+var dayIdx=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0).getTime())/864e5)%R.length;
+dd.textContent=R[dayIdx].name;dd.setAttribute('data-open',R[dayIdx].id);
+
+/* ---------- مفضلة وفلاتر مخصصة ---------- */
+var toolsEl=document.querySelector('.mx-tools');
+toolsEl.insertAdjacentHTML('beforeend','<button class="mx-f" data-cf="fav" type="button">♥ المفضلة</button>');
+toolsEl.addEventListener('click',function(e){
+  var c=e.target.closest('[data-cf]');
+  if(c){cflt=cflt==='fav'?null:'fav';document.querySelectorAll('.mx-f').forEach(function(x){x.classList.remove('on')});if(cflt==='fav')c.classList.add('on');flt='الكل';qs='';document.getElementById('q').value='';markSeason();render();return}
+  if(e.target.closest('.mx-f')){cflt=null;document.querySelectorAll('[data-cf]').forEach(function(x){x.classList.remove('on')});markSeason()}
+});
+function matchCustom(r){
+  if(cflt==='fav')return FAVS.has(r.id);
+  if(typeof cflt==='number')return SEASONS[cflt].ids.indexOf(r.id)>-1;
+  return true;
+}
+function decorateGrid(){
+  var vis=0;
+  document.querySelectorAll('#grid .mx-dish').forEach(function(a){
+    var img=a.querySelector('[data-open]');if(!img)return;
+    var id=img.getAttribute('data-open');
+    var r=R.find(function(x){return x.id===id});if(!r)return;
+    var ok=matchCustom(r);a.style.display=ok?'':'none';if(ok)vis++;
+    var ph=a.querySelector('.ph'),b=a.querySelector('.sx-heart');
+    if(!b&&ph){b=document.createElement('button');b.type='button';b.className='sx-heart';b.setAttribute('aria-label','مفضلة');b.addEventListener('click',function(ev){ev.stopPropagation();ev.preventDefault();toggleFav(id)});ph.appendChild(b)}
+    if(b){b.textContent=FAVS.has(id)?'♥':'♡';b.classList.toggle('on',FAVS.has(id))}
+  });
+  var em=document.getElementById('empty');
+  if(vis===0){em.style.display='block';em.textContent=cflt==='fav'?'لسه مفيش مفضلة. دوس ♥ على أي أكلة تعجبك.':'مفيش وصفات في المجموعة دي.'}
+}
+function toggleFav(id){if(FAVS.has(id)){FAVS.delete(id);toast('اتشالت من المفضلة')}else{FAVS.add(id);toast('اتضافت للمفضلة ♥')}saveFav();decorateGrid()}
+var _render=render;
+render=function(){_render();decorateGrid()};
+
+/* ---------- مواسم ومناسبات ---------- */
+function parseMinutes(t){t=norm(t);var m=t.match(/(\d+)\s*دق/);if(m)return +m[1];if(t.indexOf('ساعه ونص')>-1)return 90;if(t.indexOf('ساعتين')>-1)return 120;m=t.match(/(\d+)\s*ساع/);if(m)return +m[1]*60;if(t.indexOf('ساعه')>-1)return 60;return 999}
+var SEASONS=[
+ {n:'سفرة رمضان 🌙',d:'كنافة وقطايف وشوربة عدس وسمبوسك، كل اللي بيكمّل الإفطار.',ids:['konafa','qatayef','balah-el-sham','zalabia','mshabak','roz-bellaban','mahalabia','umali','adas-soup','sambousek','fatta','harira']},
+ {n:'حلو وأكل العيد 🎉',d:'كحك وغريبة وبسكويت النشادر، ومعاهم الفتة والرقاق.',ids:['kahk','ghoraiba','biscuit-nashader','baklava','fatta','kawarea','reqaq','hamam-mahshi','ruz-meamar']},
+ {n:'أكل سريع ⚡',d:'وصفات سهلة بتخلص في 35 دقيقة أو أقل، لما الوقت ضيق.',fast:true,ids:[]},
+ {n:'أكلة اقتصادية 💰',d:'أكل بسيط ومغذي ومكلفته على قد الإيد.',ids:['foul','foul-iskandarani','taameya','kushari','adas-soup','balila','fasolia','bamia','batates','egga','shakshuka','mesaa','tashreeb']}
+];
+SEASONS[2].ids=R.filter(function(r){return r.level==='سهل'&&parseMinutes(r.time)<=35}).map(function(r){return r.id});
+SEASONS[3].ids=SEASONS[3].ids.filter(function(id){return id!=='tashreeb'});
+var seasBox=document.getElementById('seas');
+seasBox.innerHTML=SEASONS.map(function(s,i){return '<button type="button" class="sx-sea" data-s="'+i+'"><b>'+s.n+'</b><small>'+s.d+'</small><small>'+s.ids.length+' وصفة</small></button>'}).join('');
+function markSeason(){document.querySelectorAll('.sx-sea').forEach(function(b,i){b.classList.toggle('on',cflt===i)})}
+seasBox.addEventListener('click',function(e){
+  var b=e.target.closest('.sx-sea');if(!b)return;
+  var i=+b.getAttribute('data-s');
+  cflt=cflt===i?null:i;
+  document.querySelectorAll('.mx-f').forEach(function(x){x.classList.remove('on')});
+  document.querySelectorAll('[data-cf]').forEach(function(x){x.classList.remove('on')});
+  flt='الكل';qs='';document.getElementById('q').value='';markSeason();render();
+  if(cflt!==null)document.getElementById('recipes').scrollIntoView({behavior:'smooth'});
+});
+
+/* ---------- التلاجة ---------- */
+var FCH=['بيض','بطاطس','بصل','طماطم','فراخ','لحمة','سمك','جمبري','رز','مكرونة','عدس','فول','جبنة','زبادي','دقيق','كوسة','بتنجان','بقدونس','توم','زيت'];
+var fcBox=document.getElementById('fchips');
+fcBox.innerHTML=FCH.map(function(c){return '<button type="button" class="sx-fchip" data-c="'+c+'">'+c+'</button>'}).join('');
+var FT=[];
+function renderFSel(){var s=document.getElementById('fsel');s.innerHTML=FT.map(function(t,i){return '<span data-i="'+i+'">'+t+' ✕</span>'}).join('');fridgeFind()}
+fcBox.addEventListener('click',function(e){
+  var b=e.target.closest('.sx-fchip');if(!b)return;
+  var c=b.getAttribute('data-c');
+  if(FT.indexOf(c)>-1){FT=FT.filter(function(x){return x!==c});b.classList.remove('on')}else{FT.push(c);b.classList.add('on')}
+  renderFSel();
+});
+document.getElementById('fsel').addEventListener('click',function(e){
+  var s=e.target.closest('span');if(!s)return;
+  FT.splice(+s.getAttribute('data-i'),1);
+  fcBox.querySelectorAll('.sx-fchip').forEach(function(b){b.classList.toggle('on',FT.indexOf(b.getAttribute('data-c'))>-1)});
+  renderFSel();
+});
+document.getElementById('finput').addEventListener('keydown',function(e){
+  if(e.key==='Enter'){var v=e.target.value.trim();if(v&&FT.indexOf(v)<0){FT.push(v);renderFSel()}e.target.value=''}
+});
+function fridgeFind(){
+  var res=document.getElementById('fres'),em=document.getElementById('fempty');
+  if(!FT.length){res.innerHTML='';em.style.display='none';return}
+  var toks=FT.map(norm);
+  var scored=R.map(function(r){var hay=norm(r.name+' '+r.ing.join(' '));var hit=toks.filter(function(t){return hay.indexOf(t)>-1});return {r:r,hit:hit}}).filter(function(x){return x.hit.length>0}).sort(function(a,b){return b.hit.length-a.hit.length}).slice(0,12);
+  res.innerHTML=scored.map(function(x){var r=x.r;return '<article class="mx-dish rv in"><div class="ph"><img loading="lazy" alt="'+r.name+'" src="'+r.img+'" data-open="'+r.id+'"></div><div class="mx-dish-body"><h3>'+r.name+'</h3><div class="sx-score">عندك '+x.hit.length+' من '+FT.length+' من مقاديرها</div><button type="button" class="mx-dish-btn" data-open="'+r.id+'">شوف الوصفة</button></div></article>'}).join('');
+  em.style.display=scored.length?'none':'block';
+}
+
+/* ---------- عدد الأفراد والمقادير ---------- */
+var FRACW={'نص':0.5,'ربع':0.25,'تلت':1/3,'تمن':0.125,'ثمن':0.125};
+function parseQty(s){
+  s=norm(s);var m;
+  m=s.match(/(\d+(?:[.,]\d+)?)\s*و\s*(نص|ربع|تلت|تمن|ثمن)/);
+  if(m)return {v:parseFloat(m[1].replace(',','.'))+FRACW[m[2]],i:m.index,l:m[0].length};
+  m=s.match(/(\d+(?:[.,]\d+)?)/);
+  if(m)return {v:parseFloat(m[1].replace(',','.')),i:m.index,l:m[0].length};
+  m=s.match(/و\s*(نص|ربع|تلت|تمن|ثمن)/);
+  if(m&&/[ء-ي]\s*$/.test(s.slice(0,m.index)))return {v:1+FRACW[m[1]],i:m.index,l:m[0].length};
+  m=s.match(/(نص|ربع|تلت|تمن|ثمن)/);
+  if(m)return {v:FRACW[m[1]],i:m.index,l:m[0].length};
+  return null;
+}
+function fmtVal(v){
+  if(v>=20)return String(Math.round(v));
+  var w=Math.floor(v),f=v-w;
+  var snaps=[[0,''],[0.25,'ربع'],[1/3,'تلت'],[0.5,'نص'],[2/3,'تلتين'],[0.75,'تلات ترباع'],[1,'']];
+  var best=0,bd=9;
+  for(var i=0;i<snaps.length;i++){var d=Math.abs(f-snaps[i][0]);if(d<bd){bd=d;best=i}}
+  var ww=w,p=snaps[best];
+  if(best===snaps.length-1){ww=w+1;p=snaps[0]}
+  if(p[1]==='')return String(ww);
+  if(ww===0)return p[1];
+  return ww+' و'+p[1];
+}
+function scaleStr(s,f){
+  var q=parseQty(s);
+  if(!q)return s;
+  return s.slice(0,q.i)+fmtVal(q.v*f)+s.slice(q.i+q.l);
+}
+
+/* ---------- تحسينات صفحة الوصفة ---------- */
+var servT=4;
+var _open=open_;
+open_=function(id,push){_open(id,push);enhance()};
+function enhance(){
+  var sh=document.getElementById('sheet');var r=R[cur];servT=r.serv||4;
+  var prb=sh.querySelector('#pr');if(!prb)return;
+  var acts=prb.closest('.mx-acts');
+  var row=document.createElement('div');row.className='mx-acts sx-acts';
+  row.innerHTML='<button class="mx-btn" id="cookb" type="button">👨‍🍳 وضع الطبخ</button><button class="mx-btn mx-btn-w" id="favb" type="button"></button><button class="mx-btn mx-btn-w" id="cartb" type="button">🛒 ضيف لقايمة التسوق</button>';
+  acts.insertAdjacentElement('afterend',row);
+  var favb=row.querySelector('#favb');
+  function favPaint(){favb.textContent=FAVS.has(r.id)?'♥ في المفضلة':'♡ مفضلة'}
+  favPaint();
+  favb.onclick=function(){toggleFav(r.id);favPaint()};
+  row.querySelector('#cartb').onclick=function(){
+    if(CART.indexOf(r.id)>-1){toast('موجودة في القايمة أصلاً')}else{CART.push(r.id);saveCart();toast('اتضافت لقايمة التسوق 🛒')}
+  };
+  row.querySelector('#cookb').onclick=function(){cookStart(r)};
+  var h3=sh.querySelector('.mx-ing h3');
+  if(h3){
+    var sv=document.createElement('span');sv.className='sx-serv';
+    sv.innerHTML='تكفي <button type="button" id="svm">−</button><b id="svn"></b><button type="button" id="svp">+</button> نفر';
+    h3.appendChild(sv);
+    function paint(){sv.querySelector('#svn').textContent=servT;scaleIngs(r)}
+    sv.querySelector('#svm').onclick=function(){if(servT>1){servT--;paint()}};
+    sv.querySelector('#svp').onclick=function(){if(servT<24){servT++;paint()}};
+    paint();
+  }
+}
+function scaleIngs(r){
+  var f=servT/(r.serv||4);
+  document.querySelectorAll('#il label').forEach(function(lab,i){
+    var sp=lab.querySelector('span');if(!sp||r.ing[i]==null)return;
+    sp.textContent=f===1?r.ing[i]:scaleStr(r.ing[i],f);
+  });
+}
+
+/* ---------- وضع الطبخ والتايمر ---------- */
+var ck=null,ckI=0,wakelock=null,tInt=null,tLeft=0;
+function parseTimers(txt){
+  txt=norm(txt);var out=[];
+  txt.replace(/(\d+)\s*دق/g,function(_,n){out.push(+n);return _});
+  if(/ربع ساعه/.test(txt))out.push(15);
+  if(/تلت ساعه/.test(txt))out.push(20);
+  if(/نص ساعه/.test(txt))out.push(30);
+  if(/ساعه ونص/.test(txt))out.push(90);
+  if(/ساعتين/.test(txt))out.push(120);
+  txt.replace(/(\d+)\s*ساع/g,function(_,n){out.push(+n*60);return _});
+  out=out.filter(function(v,i){return out.indexOf(v)===i&&v>0&&v<=240}).slice(0,3);
+  return out;
+}
+function tPaint(){
+  var d=document.getElementById('cktd');if(!d)return;
+  var m=Math.floor(tLeft/60),s=tLeft%60;
+  d.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+}
+function tBeep(){
+  try{
+    var Ctx=window.AudioContext||window.webkitAudioContext;var ctx=new Ctx();
+    [0,0.35,0.7].forEach(function(t){
+      var o=ctx.createOscillator(),g=ctx.createGain();
+      o.connect(g);g.connect(ctx.destination);o.frequency.value=880;
+      g.gain.setValueAtTime(0.25,ctx.currentTime+t);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+t+0.3);
+      o.start(ctx.currentTime+t);o.stop(ctx.currentTime+t+0.32);
+    });
+  }catch(e){}
+  if(navigator.vibrate)navigator.vibrate([200,100,200]);
+  var d=document.getElementById('cktd');if(d){d.classList.add('flash');setTimeout(function(){d.classList.remove('flash')},6000)}
+}
+function tStart(min){
+  tStop();tLeft=Math.round(min*60);tPaint();
+  tInt=setInterval(function(){tLeft--;if(tLeft<=0){tStop();tLeft=0;tPaint();tBeep();toast('التايمر خلص ⏰')}else tPaint()},1000);
+}
+function tStop(){if(tInt){clearInterval(tInt);tInt=null}}
+function cookStart(r){
+  ck=r;ckI=0;
+  var ov=document.getElementById('sxcook');
+  if(!ov){ov=document.createElement('div');ov.id='sxcook';ov.className='sx-cook';document.body.appendChild(ov)}
+  ov.innerHTML='<div class="sx-cktop"><b>وضع الطبخ 👨‍🍳 '+r.name+'</b><button type="button" class="sx-xb" id="ckx">✕</button></div>'+
+  '<div class="prog"><i id="ckp"></i></div>'+
+  '<img id="ckimg" alt=""><h3 id="ckt"></h3><div class="txt" id="ckb"></div>'+
+  '<div class="sx-timer"><div class="sx-tchips" id="cktc"></div><div class="sx-tdisp" id="cktd">00:00</div><div class="sx-trow"><input id="ckti" type="number" min="1" max="180" placeholder="دقايق"><button type="button" class="sx-tb go" id="ckts">ابدأ ▶</button><button type="button" class="sx-tb" id="cktp">وقف ⏸</button><button type="button" class="sx-tb" id="cktr">صفر ↺</button></div></div>'+
+  '<div class="nav"><button type="button" class="sx-cbtn" id="ckprev">اللي فات</button><button type="button" class="sx-cbtn sx-cbtn2" id="cknext">الخطوة الجاية</button></div>';
+  ov.classList.add('open');document.body.style.overflow='hidden';
+  ov.querySelector('#ckx').onclick=cookStop;
+  ov.querySelector('#ckprev').onclick=function(){if(ckI>0){ckI--;ckShow()}};
+  ov.querySelector('#cknext').onclick=function(){if(ckI<ck.steps.length-1){ckI++;ckShow()}};
+  ov.querySelector('#ckts').onclick=function(){var v=+ov.querySelector('#ckti').value;if(v>0)tStart(v)};
+  ov.querySelector('#cktp').onclick=tStop;
+  ov.querySelector('#cktr').onclick=function(){tStop();tLeft=0;tPaint()};
+  tStop();tLeft=0;
+  ckShow();
+  if(navigator.wakeLock&&navigator.wakeLock.request){navigator.wakeLock.request('screen').then(function(w){wakelock=w}).catch(function(){})}
+}
+function ckShow(){
+  var s=ck.steps[ckI];
+  document.getElementById('ckimg').src=ck.stepimgs[ckI];
+  document.getElementById('ckt').textContent='خطوة '+(ckI+1)+' من '+ck.steps.length+': '+s[0];
+  document.getElementById('ckb').textContent=s[1];
+  document.getElementById('ckp').style.width=((ckI+1)/ck.steps.length*100)+'%';
+  var tc=document.getElementById('cktc');
+  var ts=parseTimers(s[1]);
+  tc.innerHTML=ts.map(function(t){return '<button type="button" class="sx-tchip" data-t="'+t+'">⏱ '+t+' دقيقة</button>'}).join('')||'<span style="color:#8a7d6f;font-size:13px">مفيش وقت محدد في الخطوة دي، اكتب دقايق تحت</span>';
+  tc.querySelectorAll('.sx-tchip').forEach(function(b){b.onclick=function(){tStart(+b.getAttribute('data-t'))}});
+}
+function cookStop(){
+  var ov=document.getElementById('sxcook');
+  if(ov)ov.classList.remove('open');
+  tStop();
+  document.body.style.overflow=document.getElementById('modal').classList.contains('open')?'hidden':'';
+  if(wakelock){wakelock.release().catch(function(){});wakelock=null}
+}
+
+/* ---------- قايمة التسوق ---------- */
+function badge(){var b=document.getElementById('cartbadge');b.hidden=!CART.length;b.textContent=CART.length}
+document.getElementById('cartbtn').onclick=openCart;
+function openCart(){
+  var ov=document.getElementById('sxcart');
+  if(!ov){ov=document.createElement('div');ov.id='sxcart';ov.className='sx-ov';document.body.appendChild(ov)}
+  var groups=CART.map(function(id){return R.find(function(r){return r.id===id})}).filter(Boolean);
+  var h='<div class="sx-box"><button type="button" class="sx-x" id="cx">✕</button><h2>قايمة التسوق 🛒</h2>';
+  if(!groups.length)h+='<p class="sx-cempty">القايمة فاضية. افتح أي وصفة ودوس «🛒 ضيف لقايمة التسوق» وكل المقادير هتتجمع هنا.</p>';
+  else{
+    groups.forEach(function(r,gi){
+      h+='<div class="sx-cg"><div class="sx-cgh"><b><a data-open="'+r.id+'">'+r.name+'</a></b><button type="button" class="sx-crm" data-g="'+gi+'">شيلها</button></div><div class="sx-ci">'+r.ing.map(function(t){return '<label><input type="checkbox"><span>'+t+'</span></label>'}).join('')+'</div></div>';
+    });
+    h+='<div class="mx-acts"><a class="mx-btn" id="cw" target="_blank" rel="noopener">ابعتها واتساب</a><button type="button" class="mx-btn mx-btn-w" id="cc">فضّي القايمة</button></div>';
+  }
+  h+='</div>';
+  ov.innerHTML=h;ov.classList.add('open');document.body.style.overflow='hidden';
+  function closeCart(){ov.classList.remove('open');document.body.style.overflow=''}
+  ov.querySelector('#cx').onclick=closeCart;
+  ov.addEventListener('click',function(e){
+    if(e.target===ov)closeCart();
+    if(e.target.closest('[data-open]'))closeCart();
+  });
+  ov.querySelectorAll('.sx-crm').forEach(function(b){b.onclick=function(){CART.splice(+b.getAttribute('data-g'),1);saveCart();openCart()}});
+  var cw=ov.querySelector('#cw');
+  if(cw){var txt='قايمة تسوق من سُفرة 🛒\n'+groups.map(function(r){return '\n◾ '+r.name+':\n'+r.ing.map(function(t){return '- '+t}).join('\n')}).join('\n');cw.href='https://wa.me/?text='+encodeURIComponent(txt)}
+  var cc=ov.querySelector('#cc');
+  if(cc)cc.onclick=function(){CART=[];saveCart();openCart()};
+}
+
+/* ---------- خطة الأسبوع ---------- */
+var DAYS=['السبت','الحد','الاتنين','التلات','الأربع','الخميس','الجمعة'];
+var MEALS=['فطار','غدا','عشا'];
+var pCur=null;
+document.getElementById('planbtn').onclick=openPlan;
+function openPlan(){
+  var ov=document.getElementById('sxplan');
+  if(!ov){ov=document.createElement('div');ov.id='sxplan';ov.className='sx-ov';document.body.appendChild(ov)}
+  var filled=0;
+  var h='<div class="sx-box"><button type="button" class="sx-x" id="px">✕</button><h2>خطة الأسبوع 📅</h2><div class="sx-pgrid">';
+  DAYS.forEach(function(d){
+    h+='<div class="sx-pday"><b>'+d+'</b>';
+    MEALS.forEach(function(m){
+      var id=PLAN[d]&&PLAN[d][m];
+      var r=id&&R.find(function(x){return x.id===id});
+      if(r)filled++;
+      h+='<button type="button" class="sx-pcell'+(r?' full':'')+'" data-d="'+d+'" data-m="'+m+'">'+(r?r.name:'＋ '+m)+'</button>';
+    });
+    h+='</div>';
+  });
+  h+='</div><div class="mx-acts"><button type="button" class="mx-btn" id="prnd">🎲 خطط عشوائي</button><a class="mx-btn mx-btn-w" id="pw" target="_blank" rel="noopener"'+(filled?'':' style="visibility:hidden"')+'>ابعتها واتساب</a><button type="button" class="mx-btn mx-btn-w" id="pcl">امسح الخطة</button></div>';
+  h+='<div class="sx-ppick" id="ppick" hidden><input class="mx-search" id="ppq" type="search" placeholder="دوّر على وصفة..."><div class="sx-pplist" id="pplist"></div></div></div>';
+  ov.innerHTML=h;ov.classList.add('open');document.body.style.overflow='hidden';
+  function closePlan(){ov.classList.remove('open');document.body.style.overflow=''}
+  ov.querySelector('#px').onclick=closePlan;
+  ov.addEventListener('click',function(e){if(e.target===ov)closePlan()});
+  ov.querySelectorAll('.sx-pcell').forEach(function(c){
+    c.onclick=function(){
+      pCur={d:c.getAttribute('data-d'),m:c.getAttribute('data-m')};
+      var pp=ov.querySelector('#ppick');pp.hidden=false;
+      ov.querySelector('#ppq').value='';plistPaint('');
+      pp.scrollIntoView({behavior:'smooth'});
+    };
+  });
+  ov.querySelector('#ppq').addEventListener('input',function(e){plistPaint(norm(e.target.value.trim()))});
+  function plistPaint(q){
+    var list=R.filter(function(r){return r.meals.indexOf(pCur.m)>-1&&(!q||norm(r.name).indexOf(q)>-1)});
+    ov.querySelector('#pplist').innerHTML=list.map(function(r){return '<button type="button" data-id="'+r.id+'">'+r.name+'</button>'}).join('')||'<span style="color:#5a4f46;font-size:13px">مفيش وصفة بالاسم ده للوجبة دي.</span>';
+    ov.querySelectorAll('#pplist button').forEach(function(b){
+      b.onclick=function(){
+        PLAN[pCur.d]=PLAN[pCur.d]||{};PLAN[pCur.d][pCur.m]=b.getAttribute('data-id');
+        savePlan();openPlan();
+      };
+    });
+  }
+  ov.querySelector('#prnd').onclick=function(){
+    DAYS.forEach(function(d){MEALS.forEach(function(m){
+      var pool=R.filter(function(r){return r.meals.indexOf(m)>-1});
+      if(pool.length){PLAN[d]=PLAN[d]||{};PLAN[d][m]=pool[Math.floor(Math.random()*pool.length)].id}
+    })});
+    savePlan();openPlan();toast('الخطة جاهزة 🎲');
+  };
+  ov.querySelector('#pcl').onclick=function(){PLAN={};savePlan();openPlan()};
+  var pw=ov.querySelector('#pw');
+  if(filled){
+    var txt='خطة الأسبوع من سُفرة 📅\n'+DAYS.map(function(d){
+      var p=PLAN[d]||{};var parts=MEALS.map(function(m){var id=p[m];var r=id&&R.find(function(x){return x.id===id});return r?m+': '+r.name:null}).filter(Boolean);
+      return parts.length?'▪ '+d+' → '+parts.join('، '):null;
+    }).filter(Boolean).join('\n');
+    pw.href='https://wa.me/?text='+encodeURIComponent(txt);
+  }
+}
+
+/* ---------- ميزانية الأسبوع ---------- */
+function costOf(r){
+  var s=norm(r.ing.join(' '));var c=60;
+  if(/لحم/.test(s))c+=220;
+  if(/فراخ|دجاج/.test(s))c+=140;
+  if(/سمك|جمبري|سبيط/.test(s))c+=180;
+  if(/كبده|كوارع|ممبار/.test(s))c+=120;
+  if(/سجق|بسطرمه/.test(s))c+=90;
+  if(/بيض/.test(s))c+=30;
+  if(/جبن|جبنه|قشطه|زبادي/.test(s))c+=50;
+  if(/سمن|زبده/.test(s))c+=40;
+  if(/مكسرات|لوز|عسل/.test(s))c+=60;
+  if(r.cat==='حلويات')c+=30;
+  if(r.cat==='عزومات')c+=50;
+  return c;
+}
+var COST={};R.forEach(function(r){COST[r.id]=costOf(r)});
+function budgetPlan(){
+  var ppl=Math.max(1,Math.min(20,+document.getElementById('bppl').value||4));
+  var budget=Math.max(200,+document.getElementById('bcash').value||2000);
+  var scale=ppl/4;
+  var bf=R.filter(function(r){return r.meals.indexOf('فطار')>-1}).sort(function(a,b){return COST[a.id]-COST[b.id]});
+  var gh=R.filter(function(r){return r.meals.indexOf('غدا')>-1});
+  var ash=R.filter(function(r){return r.meals.indexOf('عشا')>-1});
+  function pick(pool,used){var c=pool.filter(function(r){return used.indexOf(r.id)<0});if(!c.length)c=pool;return c[Math.floor(Math.random()*c.length)]}
+  var plan=[],used=[],total=0;
+  for(var i=0;i<7;i++){
+    var f=pick(bf,used);used.push(f.id);
+    var g=pick(gh,used);used.push(g.id);
+    var a=pick(ash,used);used.push(a.id);
+    plan.push({f:f,g:g,a:a});
+    total+=(COST[f.id]+COST[g.id]+COST[a.id])*scale;
+  }
+  var cheapGh=gh.slice().sort(function(a,b){return COST[a.id]-COST[b.id]});
+  var tries=0;
+  while(total>budget&&tries<60){
+    tries++;
+    var worst=0,wv=0;
+    plan.forEach(function(p,i){var v=COST[p.g.id];if(v>wv){wv=v;worst=i}});
+    var cheap=cheapGh[Math.floor(Math.random()*Math.min(8,cheapGh.length))];
+    plan[worst].g=cheap;
+    total=plan.reduce(function(t,p){return t+(COST[p.f.id]+COST[p.g.id]+COST[p.a.id])*scale},0);
+  }
+  var g=document.getElementById('bgrid');
+  g.innerHTML=DAYS.map(function(d,i){
+    var p=plan[i];
+    return '<div class="sx-pday"><b>'+d+'</b>'+[p.f,p.g,p.a].map(function(r){return '<button type="button" class="sx-pcell full" data-open="'+r.id+'">'+r.name+'</button>'}).join('')+'</div>';
+  }).join('');
+  var sum=document.getElementById('bsum');
+  var ok=total<=budget;
+  sum.className='sx-bsum '+(ok?'ok':'over');
+  sum.textContent='التكلفة التقديرية: '+Math.round(total)+' جنيه من '+budget+(ok?' ✅':' ⚠️ زيادة عن الميزانية');
+}
+document.getElementById('bgo').onclick=budgetPlan;
+
+/* ---------- اسأل الشيف ---------- */
+var chatbox=document.getElementById('chatbox'),chatm=document.getElementById('chatm');
+document.getElementById('chatbtn').onclick=function(){chatbox.classList.toggle('open');if(chatbox.classList.contains('open')&&!chatm.children.length)botSay('أهلاً بيك في سُفرة! 👨‍🍳 اسألني عن أي أكلة، أو قولي مكون عندك وأنا أقترحلك تطبخ إيه. مثلاً: «عندي فراخ» أو «عايز حاجة سريعة» أو «الأكل طلع مالح».')};
+document.getElementById('chatx').onclick=function(){chatbox.classList.remove('open')};
+function botSay(h){var d=document.createElement('div');d.className='sx-msg bot';d.innerHTML=h;chatm.appendChild(d);chatm.scrollTop=chatm.scrollHeight}
+function meSay(t){var d=document.createElement('div');d.className='sx-msg me';d.textContent=t;chatm.appendChild(d);chatm.scrollTop=chatm.scrollHeight}
+function rLink(r){return '<a data-open="'+r.id+'">'+r.name+'</a>'}
+function chefReply(q){
+  var n=norm(q);
+  var byName=R.filter(function(r){return norm(r.name).indexOf(n)>-1||(n.length>2&&n.indexOf(norm(r.name))>-1)});
+  if(n.length>1&&byName.length)return 'أهي وصفة '+byName.slice(0,3).map(rLink).join('، ')+'. دوس عليها تشوف المقادير والخطوات. بالهنا! 😋';
+  if(/ازيك|اهلا|هاي|سلام|صباح|مساء/.test(n))return 'أهلاً وسهلاً! 🧡 اسألني عن أي أكلة مصرية أو عربية، أو مكون عندك في التلاجة، أو مشكلة وقعت فيها في المطبخ.';
+  if(/مالح|ملح زياده/.test(n))return 'متقلقش! ارمي شرايح بطاطس نية في الحلة ربع ساعة تمتص الملح، أو زوّد ميه أو صلصة من غير ملح. تفاصيل أكتر في قسم إنقاذ الأكل تحت 🚑';
+  if(/حرق|محروق|بيحرق/.test(n))return 'بلاش تقلّب! انقل اللي فوق في حلة نضيفة بهدوء وحط قطعة عيش على الوش تشد ريحة الحرقان. شوف قسم «إنقاذ الأكل» لحلول تانية 🔥';
+  if(/شطه|حار|حراق/.test(n))return 'الشطة الزيادة بتتكسر بلبن أو زبادي أو طماطم أو رشة سكر صغيرة 🌶️';
+  if(/عجن|ماجن|الرز/.test(n)&&/رز|ارز/.test(n))return 'الرز العجين: افرده على صينية ودخّله فرن هادي 10 دقايق، أو غطّه بفوطة نضيفة تمتص البخار 🍚';
+  if(/سريع|بسرعه|عجله|مستعجل/.test(n)){var fast=R.filter(function(r){return r.level==='سهل'&&parseMinutes(r.time)<=30}).slice(0,4);return 'عايز حاجة سريعة؟ جرب: '+fast.map(rLink).join('، ')+' ⚡ كلها بتخلص في نص ساعة أو أقل.'}
+  if(/حلو|حلويات/.test(n)){var ds=R.filter(function(r){return r.cat==='حلويات'});ds=ds.slice(0,5);return 'للحلو عندنا: '+ds.map(rLink).join('، ')+' 🍮 ولسه غيرهم كتير في فلتر «حلويات».'}
+  if(/رخيص|اقتصادي|ميزانيه|فلوس/.test(n))return 'على قد الميزانية؟ جرب '+['foul','taameya','kushari','adas-soup','egga'].map(function(id){return rLink(R.find(function(r){return r.id===id}))}).join('، ')+' 💰 وجرب قسم «ميزانية الأسبوع» بيرتبلك أسبوع كامل على قد جيبك.';
+  if(/رمضان/.test(n))return 'لسفرة رمضان عندنا مجموعة جاهزة في قسم «مواسم ومناسبات»: كنافة وقطايف وشوربة عدس وسمبوسك 🌙';
+  if(/عيد/.test(n))return 'للعيد: '+['kahk','ghoraiba','fatta','baklava'].map(function(id){return rLink(R.find(function(r){return r.id===id}))}).join('، ')+' 🎉';
+  if(/فطار|فطر/.test(n)){var bf=R.filter(function(r){return r.meals.indexOf('فطار')>-1}).slice(0,5);return 'للفطار: '+bf.map(rLink).join('، ')+' 🍳'}
+  if(/غدا|غدي/.test(n)){var gh=R.filter(function(r){return r.meals.indexOf('غدا')>-1}).slice(0,5);return 'للغدا: '+gh.map(rLink).join('، ')+' 🍲 وجرب لعبة «نأكل إيه النهارده؟» فوق لو محتار.'}
+  if(/عشا|عشي/.test(n)){var ah=R.filter(function(r){return r.meals.indexOf('عشا')>-1}).slice(0,5);return 'للعشا: '+ah.map(rLink).join('، ')+' 🌙'}
+  var toks=n.split(/\s+/).filter(function(t){return t.length>2});
+  if(toks.length){
+    var scored=R.map(function(r){var hay=norm(r.name+' '+r.ing.join(' '));var h=toks.filter(function(t){return hay.indexOf(t)>-1}).length;return {r:r,h:h}}).filter(function(x){return x.h>0}).sort(function(a,b){return b.h-a.h}).slice(0,4);
+    if(scored.length)return 'بالمكونات دي تقدر تعمل: '+scored.map(function(x){return rLink(x.r)}).join('، ')+' 👨‍🍳 جرب قسم «عندي إيه في التلاجة؟» كمان.';
+  }
+  return 'مش فاهم قصدك قوي 🤔 جرب تسألني: «عندي فراخ وبطاطس»، أو «عايز حاجة سريعة»، أو «إيه حلويات العيد؟»، أو «الأكل طلع مالح أعمل إيه؟»';
+}
+function chatSend(){
+  var inp=document.getElementById('chati');var v=inp.value.trim();
+  if(!v)return;meSay(v);inp.value='';
+  setTimeout(function(){botSay(chefReply(v))},350);
+}
+document.getElementById('chats').onclick=chatSend;
+document.getElementById('chati').addEventListener('keydown',function(e){if(e.key==='Enter')chatSend()});
+
+/* ---------- عام ---------- */
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    var c=document.getElementById('sxcook');if(c&&c.classList.contains('open'))cookStop();
+    document.querySelectorAll('.sx-ov.open').forEach(function(o){o.classList.remove('open');document.body.style.overflow=''});
+    chatbox.classList.remove('open');
+  }
+});
+badge();reveal();
+decorateGrid();
+})();
+
 </script></body></html>
