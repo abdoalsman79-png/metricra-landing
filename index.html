@@ -761,36 +761,34 @@ function budgetPlan(){
   var budget=Math.max(200,+document.getElementById('bcash').value||2000);
   var scale=ppl/4;
   var bf=R.filter(function(r){return r.meals.indexOf('فطار')>-1}).sort(function(a,b){return COST[a.id]-COST[b.id]});
-  var gh=R.filter(function(r){return r.meals.indexOf('غدا')>-1});
-  var ash=R.filter(function(r){return r.meals.indexOf('عشا')>-1});
+  var gh=R.filter(function(r){return r.meals.indexOf('غدا')>-1}).sort(function(a,b){return COST[a.id]-COST[b.id]});
+  var ash=R.filter(function(r){return r.meals.indexOf('عشا')>-1}).sort(function(a,b){return COST[a.id]-COST[b.id]});
+  var per=budget/(21*scale);
+  function poolFor(pool){var c=pool.filter(function(r){return COST[r.id]<=per*1.4});return c.length>=3?c:pool.slice(0,Math.max(3,Math.floor(pool.length/3)))}
   function pick(pool,used){var c=pool.filter(function(r){return used.indexOf(r.id)<0});if(!c.length)c=pool;return c[Math.floor(Math.random()*c.length)]}
-  var plan=[],used=[],total=0;
-  for(var i=0;i<7;i++){
-    var f=pick(bf,used);used.push(f.id);
-    var g=pick(gh,used);used.push(g.id);
-    var a=pick(ash,used);used.push(a.id);
-    plan.push({f:f,g:g,a:a});
-    total+=(COST[f.id]+COST[g.id]+COST[a.id])*scale;
-  }
-  var cheapGh=gh.slice().sort(function(a,b){return COST[a.id]-COST[b.id]});
-  var tries=0;
-  while(total>budget&&tries<60){
+  var plan=[],used=[],i;
+  for(i=0;i<7;i++){var f=pick(poolFor(bf),used);used.push(f.id);var g=pick(poolFor(gh),used);used.push(g.id);var a=pick(poolFor(ash),used);used.push(a.id);plan.push({f:f,g:g,a:a})}
+  function tot(){return plan.reduce(function(t,p){return t+(COST[p.f.id]+COST[p.g.id]+COST[p.a.id])*scale},0)}
+  var total=tot(),tries=0;
+  while(total>budget&&tries<250){
     tries++;
-    var worst=0,wv=0;
-    plan.forEach(function(p,i){var v=COST[p.g.id];if(v>wv){wv=v;worst=i}});
-    var cheap=cheapGh[Math.floor(Math.random()*Math.min(8,cheapGh.length))];
-    plan[worst].g=cheap;
-    total=plan.reduce(function(t,p){return t+(COST[p.f.id]+COST[p.g.id]+COST[p.a.id])*scale},0);
+    var wi=0,ws='g',wv=0;
+    plan.forEach(function(p,i2){['f','g','a'].forEach(function(k){var v=COST[p[k].id];if(v>wv){wv=v;wi=i2;ws=k}})});
+    var pool=ws==='f'?bf:(ws==='g'?gh:ash);
+    var cheaper=pool.filter(function(r){return COST[r.id]<wv});
+    if(!cheaper.length)break;
+    plan[wi][ws]=cheaper[Math.floor(Math.random()*Math.min(6,cheaper.length))];
+    total=tot();
   }
   var g=document.getElementById('bgrid');
-  g.innerHTML=DAYS.map(function(d,i){
-    var p=plan[i];
+  g.innerHTML=DAYS.map(function(d,i2){
+    var p=plan[i2];
     return '<div class="sx-pday"><b>'+d+'</b>'+[p.f,p.g,p.a].map(function(r){return '<button type="button" class="sx-pcell full" data-open="'+r.id+'">'+r.name+'</button>'}).join('')+'</div>';
   }).join('');
   var sum=document.getElementById('bsum');
   var ok=total<=budget;
   sum.className='sx-bsum '+(ok?'ok':'over');
-  sum.textContent='التكلفة التقديرية: '+Math.round(total)+' جنيه من '+budget+(ok?' ✅':' ⚠️ زيادة عن الميزانية');
+  sum.textContent='التكلفة التقديرية: '+Math.round(total)+' جنيه من '+budget+(ok?' ✅':' ⚠️ أرخص تشكيلة عندنا بتعدي الميزانية دي بشوية');
 }
 document.getElementById('bgo').onclick=budgetPlan;
 
