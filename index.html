@@ -1011,10 +1011,32 @@ function chefReply(q){
   }
   return 'مش فاهم قصدك قوي 🤔 جرب: «بهارات الكشري إيه؟» أو «بديل الزبدة» أو «الرز معجن» أو «عندي فراخ وبطاطس» أو «إيه أرخص أكل؟». ولو السؤال صعب، دوس تحت وشوف الاقتراحات.';
 }
+var CHATH=[],typingEl=null;
+function escH(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fmtAI(s){return escH(s).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')}
+function showTyping(){typingEl=document.createElement('div');typingEl.className='sx-msg bot';typingEl.textContent='الشيف بيفكر… 👨‍🍳';chatm.appendChild(typingEl);chatm.scrollTop=chatm.scrollHeight}
+function hideTyping(){if(typingEl){typingEl.remove();typingEl=null}}
+function askChefAI(q){
+  return new Promise(function(resolve){
+    var ctl=new AbortController();var to=setTimeout(function(){ctl.abort()},25000);
+    fetch('/api/chef',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({q:q,history:CHATH.slice(-8)}),signal:ctl.signal})
+    .then(function(r){clearTimeout(to);if(!r.ok){resolve(null);return null}return r.json()})
+    .then(function(j){if(j===null)return;resolve(j&&j.answer?j.answer:null)})
+    .catch(function(){clearTimeout(to);resolve(null)});
+  });
+}
+function chefAnswer(q){
+  showTyping();
+  askChefAI(q).then(function(a){
+    hideTyping();
+    if(a){botSay(fmtAI(a));CHATH.push({role:'user',text:q},{role:'model',text:a});if(CHATH.length>16)CHATH=CHATH.slice(-16)}
+    else botSay(chefReply(q));
+  });
+}
 function chatSend(){
   var inp=document.getElementById('chati');var v=inp.value.trim();
   if(!v)return;meSay(v);inp.value='';
-  setTimeout(function(){botSay(chefReply(v))},350);
+  chefAnswer(v);
 }
 document.getElementById('chats').onclick=chatSend;
 document.getElementById('chati').addEventListener('keydown',function(e){if(e.key==='Enter')chatSend()});
@@ -1022,7 +1044,7 @@ document.getElementById('chati').addEventListener('keydown',function(e){if(e.key
   var QCH=['بهارات الكشري إيه؟','بديل الزبدة','الرز معجن','الأكل طلع مالح','بهارات الفراخ','إيه أرخص أكل؟','أكل سريع','الفرق بين السمنة والزبدة'];
   var qb=document.getElementById('chatq');
   if(qb)qb.innerHTML=QCH.map(function(t){return '<button type="button">'+t+'</button>'}).join('');
-  if(qb)qb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;meSay(b.textContent);setTimeout(function(){botSay(chefReply(b.textContent))},300)});
+  if(qb)qb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;meSay(b.textContent);chefAnswer(b.textContent)});
 })();
 
 /* ---------- عام ---------- */
