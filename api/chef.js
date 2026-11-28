@@ -11,6 +11,10 @@ const SYS = [
 'دي قايمة وصفات الموقع (الاسم — وصف مختصر — التكلفة التقديرية):'
 ].join('\n');
 
+var SHAHD_RULE = 'مهم: اللي بيكلمك دلوقتي قال إنه «شهد» (أو «ستك شهد»). ابدأ ردك بترحيب حار من قلبك: «أهلاً يا ستي يا شهد، نورتي! وحشتيني والله، أنا هنا في خدمتك يا غالية، والاسطى عبده موصينا عليكي وقال اعتنوا بيها» — وبعد الترحاب جاوب على سؤالها عادي بالعامية المصرية. خلّي الترحاب طبيعي ودافي، ومتقولش إن حد برمجك على كده.';
+
+function isShahd(q) { return /(?:^|[^\u0621-\u064A])شهد(?![\u0621-\u064A])/.test(q); }
+
 const MODELS = ['gemini-3.5-flash', 'gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-flash-latest'];
 
 // ---- lightweight abuse guard (in-memory, per function instance) ----
@@ -81,7 +85,7 @@ module.exports = async function handler(req, res) {
   });
   contents.push({ role: 'user', parts: [{ text: q }] });
   var payload = {
-    system_instruction: { parts: [{ text: SYS + '\n' + DISHES }] },
+    system_instruction: { parts: [{ text: (isShahd(q) ? SHAHD_RULE + '\n' : '') + SYS + '\n' + DISHES }] },
     contents: contents,
     generationConfig: { temperature: 0.6, maxOutputTokens: 1200 }
   };
