@@ -13,8 +13,62 @@ const SYS = [
 
 const MODELS = ['gemini-3.5-flash', 'gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-flash-latest'];
 
+// ---- lightweight abuse guard (in-memory, per function instance) ----
+// Keeps scripted traffic from draining the free Gemini quota. Per-IP limits
+// stop one visitor flooding the endpoint; the global cap bounds total Gemini
+// calls per instance per hour. A limited request gets 429 and the page falls
+// back to the built-in rules-based chef, so visitors still get an answer.
+var IP_PER_MIN = 8;
+var IP_PER_HOUR = 40;
+var GLOBAL_PER_HOUR = 90;
+var MINUTE_MS = 60 * 1000;
+var HOUR_MS = 60 * MINUTE_MS;
+var ipHits = new Map();
+var globalHits = [];
+
+function clientIp(req) {
+  var fwd = req.headers['x-forwarded-for'];
+  if (Array.isArray(fwd)) fwd = fwd[0];
+  if (fwd) { var first = String(fwd).split(',')[0].trim(); if (first) return first; }
+  var real = req.headers['x-real-ip'];
+  if (real) return String(real).trim();
+  return (req.socket && req.socket.remoteAddress) || 'unknown';
+}
+
+function keepRecent(list, now, windowMs) {
+  var cut = now - windowMs, i = 0;
+  while (i < list.length && list[i] <= cut) i++;
+  if (i) list.splice(0, i);
+  return list;
+}
+
+function limited(seconds) { return { ok: false, retryAfter: seconds }; }
+
+function throttle(ip, now) {
+  globalHits = keepRecent(globalHits, now, HOUR_MS);
+  var mine = keepRecent(ipHits.get(ip) || [], now, HOUR_MS);
+  ipHits.set(ip, mine);
+  if (globalHits.length >= GLOBAL_PER_HOUR) return limited(3600);
+  if (mine.length >= IP_PER_HOUR) return limited(3600);
+  var lastMin = 0;
+  for (var i = mine.length - 1; i >= 0; i--) { if (now - mine[i] < MINUTE_MS) lastMin++; else break; }
+  if (lastMin >= IP_PER_MIN) return limited(60);
+  if (ipHits.size > 1000) {
+    ipHits.forEach(function (v, k) { if (!v.length || now - v[v.length - 1] > HOUR_MS) ipHits.delete(k); });
+  }
+  mine.push(now);
+  globalHits.push(now);
+  return { ok: true, retryAfter: 0 };
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') { res.status(405).json({ error: 'method' }); return; }
+  var verdict = throttle(clientIp(req), Date.now());
+  if (!verdict.ok) {
+    res.setHeader('Retry-After', String(verdict.retryAfter));
+    res.status(429).json({ error: 'limited', answer: null });
+    return;
+  }
   var key = process.env.GEMINI_API_KEY;
   if (!key) { res.status(500).json({ error: 'no_key' }); return; }
   var body = req.body;
