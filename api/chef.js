@@ -11,7 +11,7 @@ const SYS = [
 'دي قايمة وصفات الموقع (الاسم — وصف مختصر — التكلفة التقديرية):'
 ].join('\n');
 
-const MODELS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+const MODELS = ['gemini-3.5-flash', 'gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-flash-latest'];
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') { res.status(405).json({ error: 'method' }); return; }
@@ -29,7 +29,7 @@ module.exports = async function handler(req, res) {
   var payload = {
     system_instruction: { parts: [{ text: SYS + '\n' + DISHES }] },
     contents: contents,
-    generationConfig: { temperature: 0.6, maxOutputTokens: 500 }
+    generationConfig: { temperature: 0.6, maxOutputTokens: 1200 }
   };
   for (var i = 0; i < MODELS.length; i++) {
     var model = MODELS[i];
